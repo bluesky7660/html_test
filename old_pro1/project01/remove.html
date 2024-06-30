@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+  <title>changhun</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="remove.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- 스크립트 -->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+  <div w3-include-html="header.html"></div>
+  <div class="black-bg"></div>
+  <main>
+    <div>
+        <div class="container">
+            <article class="titleArea">
+                <div>
+                    <h2>Remove Account</h2>
+                    <p>불편하였던 점이나 불만사항을 남겨주시면 더 좋은 모습으로 찾아 뵙기 위해 노력하겠습니다.</p>
+                </div>
+            </article>
+            <article class="remove_account">
+                <div>
+                    <h3>회원탈퇴</h3>
+                    <div>
+                        <div class="titleBox">
+                            <h4 style="line-height:4rem;">정말로 탈퇴하시겠습니까?</h4>
+                            <p>탈퇴 시 이용내역이 삭제되며<br>서비스 이용이 제한됩니다.<br>또한 삭제된 계정은 복구되지 않습니다.</p>
+                        </div>
+                        <button class="btn_width">탈퇴하기</button>
+                    </div>
+                </div>
+                <div>
+                    <div class="titleBox">
+                        <h3>설문조사</h3>
+                        <p>불편했던 점, 개선할 점을 공유해주시면<br>더 나은 서비스를 위해 반영하도록 하겠습니다.</p>
+                    </div>
+                    <div>
+                        <h4>탈퇴 사유</h4>
+                        <select style="border-color:#ccc;border-radius:5px;width:100%;padding:15px 20px;">
+                            <option value="">선택해주세요.</option>
+                            <option value="">기록을 삭제하기 위하여</option>
+                            <option value="">이용에 불편함과 장애가 많아서</option>
+                            <option value="">다른 사이트가 더 좋아서</option>
+                            <option value="">콘텐츠에 불만족</option>
+                            <option value="">원하는 기능이 없어서</option>
+                            <option value="">더이상 필요가 없어져서</option>
+                            <option value="">사이트의 방향성이 가치관과 맞지 않아서</option>
+                            <option value="">기타</option>
+                        </select>
+                    </div>
+                    <div class="suggestions">
+                        <h4>건의사항</h4>
+                        <textarea style="height:200px;background-color:white;padding:10px;margin-bottom:10px;"></textarea>
+                        <button class="btn_width">제출하기</button>
+                    </div>
+                </div>
+                <div>
+                    <div class="titleBox">
+                        <h3>탈퇴완료</h3>
+                        <img src="https://i.ibb.co/DYFdH2P/remove-completion-icon.png">
+                        <p style="font-size:1.1rem;line-height:4rem;">정상적으로 탈퇴 처리 되었습니다.</p>
+                        <p><b>그 동안 이용해주셔서 감사합니다.</b></p>
+                    </div>
+                    <button class="btn_width ">홈으로</button>
+                </div>
+              </article>
+        </div>
+    </div>
+  </main>
+  <div class="topBtn">TOP</div>
+  <div w3-include-html="footer.html"></div>
+  <script>
+    includeHTML();
+  </script>
+</body>
+</html>

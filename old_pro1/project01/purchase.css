@@ -1,0 +1,336 @@
+/*공용 class*/
+
+.titleBox {
+    margin-bottom: 20px;
+}
+
+
+/*콘텐츠 영역*/
+
+.container {
+    /* margin-top: 90px; */
+    padding-top: 100px;
+}
+
+article {
+    padding: 50px 20px 100px;
+}
+
+article>div {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/*title*/
+
+.titleArea {
+    /*background-image: url("https://i.ibb.co/bJ17g8S/purchase-bg-img2.jpg");*/
+    background-image: url("./img/purchase-bg-img2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.titleArea::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.titleArea>div {
+    position: relative;
+    z-index: 1;
+}
+
+.titleArea p {
+    padding: 30px;
+}
+
+
+/*purchase*/
+.purchase{
+    background-color: #eee;
+}
+
+/*왼쪽 구역*/
+.preview-area{
+    position: relative;
+}
+.preview-area .textArea{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    top:0;
+    bottom: 0;
+    right:0;
+    left:0;
+    /* padding:20px;
+    padding-top:0; */
+}
+.textArea h3{
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin-bottom: 20px;
+}
+.textArea .car-price{
+    margin-bottom: auto;
+}
+.textArea .car-price p:not(.price){
+    color:#000;
+    margin-bottom: 5px;
+}
+.textArea .car-price .price span{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/*탭*/
+.tabs{
+    margin-top:20px ;
+}
+.tabs>div>div{
+    background-color: #fff;
+    /* width:120px; */
+    width: calc((100% - 15px) / 4);
+    padding:10px;
+    opacity: 0.5;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.tabs>div>div:not(:first-child){
+    margin-left: 5px;
+}
+.tabs>div>div.active{
+    font-weight: 600;
+    opacity: 1;
+}
+.tabs>div>div::before{
+    content: "";
+    display: inline-block;
+    vertical-align: bottom;
+    width:0;
+    height:24px;
+    margin-right:10px;
+    border-left:1px solid #000;
+    border-right:1px solid transparent;
+    transition: 0.4s;
+}
+.tabs>div>div.active::before{
+    border-right-color:#000;
+}
+
+
+/*오른쪽 구역*/
+/*옵션*/
+.option-area{
+    max-width: 443px;
+    margin:40px auto 0;
+}
+.option-area>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.option-area>div>ul>li:not(.active){
+    display: none;
+}
+.option-area ul li h3{
+    margin-bottom: 10px;
+}
+.option-area ul li ul{
+    margin-top: 10px;
+}
+
+.color-name{
+    font-size: 1.2rem;
+}
+/* .color-list{
+    
+} */
+.color-list li{
+    width:40px;
+    height:40px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    position: relative;
+    cursor: pointer;
+}
+.color-list li.active::after{
+    content: "✔";
+    display: inline-block;
+    position: absolute;
+    top:-10px;
+    right:-10px;
+    text-align: center;
+    width: 24px;
+    background-color: rgb(255,255,255);
+    border-radius: 50%;
+}
+.white{
+    background-color: #fff;
+}
+.black{
+    background-color: #000;
+}
+.guardsRed{
+    background-color: #CC0033;
+}
+.racingYellow{
+    background-color: #FFCC00;
+}
+.gentianBlueMetallic{
+    background-color: #00194B;
+}
+.GT-SilverMetallic{
+    background-color: #CCCCCC;
+}
+.sharkBlue{
+    background-color: #006DD1;
+}
+.pythonGreen{
+    background-color: #3C9343;
+}
+.aroticGray{
+    background-color: #6A6C70;
+}
+
+
+/*휠선택*/
+.wheels-list li{
+    width: 70px;
+    border: 1px solid transparent;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.wheels-list li:hover,.wheels-list li.active{
+    border-color: #CC0033;
+}
+.wheels-list li>div{
+    padding-top: 100%;
+    background-image: url("https://cc.porsche.com/icc/model/2023/98212/common/tiles-AR.jpg?hc=fda42b70e6d6e3c29a6b9f8815b9da0d");
+    background-size: cover;
+}
+.boxster-18>div{
+    background-position: 0px 28.5714%;
+}
+.cayman-18>div{
+    background-position: 0px 42.8571%;
+}
+.boxster-s-19>div{
+    background-position: 0px 57.1429%;
+}
+.cayman-s-19>div{
+    background-position: 0px 71.4286%;
+}
+.carrera-s-20>div{
+    background-position: 0px 100%;
+}
+
+/*선택옵션 , 액세서리*/
+.individual-list,.convenience-list{
+    max-width: 436px;
+}
+.individual-list li,.convenience-list li{
+    width:calc((100% - 20px) / 2);
+    max-width: 208px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #aaa;
+    margin-bottom: 20px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.individual-list li.active,.convenience-list li.active{
+    border-color:#CC0033 ;
+}
+.individual-list li:hover img,.convenience-list li:hover img{
+    transform: scale(1.2);
+}
+.individual-list li .imgBox,.convenience-list li .imgBox{
+    height:173px;
+}
+.individual-list li h3,.convenience-list li h3{
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+}
+.individual-list li img,.convenience-list li img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/*견적완료*/
+.estimate-complete{
+    margin-top: 40px;
+}
+.estimate-complete button{
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    /* .preview-area .textArea{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        top:0;
+        bottom: 0;
+        right:0;
+        left:0;
+        padding:20px;
+        z-index: 1;
+    } */
+    .tabs{
+        margin-top:20px ;
+    }
+    /* .tabs>div>div{
+        margin-bottom: 5px;
+        
+        opacity: 0.8;
+    }
+    .tabs>div>div:not(:first-child){
+        margin-left: 0;
+    } */
+
+   
+    
+
+    /* .individual-list,.convenience-list{
+        max-width: none;
+        justify-content: left;
+    }
+    .individual-list li,.convenience-list li{
+        margin-right: 20px;
+    } */
+}
+@media screen and (min-width: 1024px) {
+    .purchase>div{
+        display: flex;
+        justify-content: space-between;
+    }
+    .preview-area{
+        width:calc(100% - 463px);
+    }
+    .option-area{
+        margin: 0;
+        height:744px;
+    }
+    .color-content,.wheels-content{
+        margin-top: 150px;
+    }
+}

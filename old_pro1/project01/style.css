@@ -1,0 +1,492 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    word-break: keep-all;
+    /*   outline: 0px solid silver; */
+}
+
+img {
+    width: 100%;
+    vertical-align: top;
+    transition: 0.4s;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    background: #fff;
+    color: #000;
+    letter-spacing: 0.1px;
+    overflow-x: hidden;
+    /* text-align: center; */
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: black;
+}
+
+a:active {
+    color: black;
+}
+
+button {
+    font-family: 'Noto Sans KR', 'Oswald', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1rem;
+    text-transform: uppercase;
+    padding: 15px 20px;
+    border: 1px solid #aaa;
+    border-radius: 0;
+    background: transparent;
+    color: #000;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+button:hover {
+    background-color: #000;
+    color:#fff;
+}
+
+
+
+.pc{
+    display: none;
+}
+.disFlex {
+    display: flex;
+}
+
+.flex_option1 {
+    justify-content: space-between;
+}
+
+.flex_option2 {
+    flex-wrap: nowrap;
+}
+
+.flex_option3 {
+    flex-wrap: wrap;
+}
+.imgBox{
+    overflow: hidden;
+    position: relative;
+}
+.textBox{
+    padding:20px;
+}
+.titleBox{
+    margin-bottom: 40px;
+}
+.logo img{
+    width: auto;
+    height:100%;
+}
+
+/*header*/
+header{
+    border-bottom: 1px solid #aaa;
+    width:100%;
+    padding:20px;
+    position: fixed;
+    top:0;
+    left:0;
+    background-color: #Fff;
+    z-index: 10;
+}
+header>div{
+    max-width: 1600px;
+    margin:0 auto;
+}
+header .headerArea>div{
+    align-content: center;
+    height:60px;
+    
+}
+.headerArea .logo{
+    height:100px;
+    padding:20px;
+    background-color: #fff;
+    border: 1px solid #aaa; 
+    z-index: 5;
+}
+header .header-pc ul{
+    height:100%;
+}
+.header-pc ul li{
+    margin-right: 20px;
+    
+    text-transform: uppercase;
+    align-self: center;
+    cursor: pointer;
+}
+.header-pc ul li a{
+    padding:5px 0;
+    display: inline-block;
+}
+.header-pc ul li a::after{
+	content: "";
+    display: block;
+    margin-top: 2px;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: 0.4s;
+}
+.header-pc ul li:hover a::after{
+	width: 100%;
+}
+.header-right>div{
+    height:100%;
+}
+.header-right>div>div{
+    cursor: pointer;
+    margin-left: 10px;
+    align-self: center;
+    flex-shrink: 0;
+}
+.header-right>div>div.search-btn,.header-right>div>div.navBtn{
+    width: 40px;
+    display: flex;
+    align-items: center;
+    padding:10px;
+    transition: 0.4s;
+}
+.navBtn svg,.search-btn svg{transition: 0.4s;}
+.navBtn:hover,.search-btn:hover{
+    background-color: #000;
+}
+.navBtn:hover svg,.search-btn:hover svg{
+    fill: #fff;
+    
+}
+.header-right .membership::before{
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height:24px;
+    transform: scale(1.2);
+    vertical-align: middle;
+    margin-right: 5px;
+    background-image: url("https://icons.veryicon.com/png/o/miscellaneous/x/my-car.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.header-right .membership::after,.header-right .loginBtn::after{
+    content: "";
+    display: block;
+    margin-top: 2px;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: 0.4s;
+}
+.header-right .membership:hover::after,.header-right .loginBtn:hover::after{
+   width: 100%;
+}
+.header-right .loginBtn::before{
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height:24px;
+    vertical-align: middle;
+    margin-right: 5px;
+    background-image: url("https://icons.veryicon.com/png/o/education-technology/cloud-platform-1/user-icon.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*nav*/
+.navBox{
+    max-width: 500px;
+    width:100%;
+    height: 100vh;
+    position: absolute;
+    right:-100%;
+    top:0;
+    background-color: #fff;
+    color:#000;
+    text-align: left;
+    z-index: 99;
+    transition: 0.4s;
+}
+.navBox>div{
+    position: relative;
+    height:100%;
+    width:100%;
+}
+.nav-top{
+padding:20px;
+border-bottom: 1px solid #aaa;
+}
+.nav-top .logo {
+height:40px;
+}
+.nav-top .logo img{
+height:100%;
+width:auto;
+}
+.nav-top .nav-close-btn{
+height:40px;
+cursor: pointer;
+}
+.nav-close-btn img{
+height: 100%;
+transition: 0.5s;
+width:auto;
+}
+.nav-close-btn:hover img{
+    transform: rotate(180deg);
+}
+
+
+.nav-center .content{
+padding:20px;
+}
+.nav-center .content ul li{
+padding: 0;
+cursor: pointer;
+}
+.nav-center .content ul li p,.nav-center .content ul li a{
+    text-transform: uppercase;
+padding:10px 0;
+cursor: pointer;
+color:#000;
+}
+.nav-center .content ul li a{
+display:inline-block;
+width:100%;
+
+}
+.nav-center .content ul li p:hover,.nav-center .content ul li a:hover,.nav-center .content ul li>div>div:hover{
+font-weight: bold;
+}
+.nav-center .content ul li>div{
+max-height: 0;
+padding:0 10px;
+border-bottom: 1px solid transparent;
+overflow: hidden;
+transition: 0.2s linear;
+cursor: pointer;
+}
+.nav-center .content ul li>div.active{
+max-height: 800px;
+}
+.nav-center .content ul li>div>div{
+font-size: 0.9rem;
+opacity: 0.8;
+cursor: pointer;
+}
+
+.nav-bottom{
+position: absolute;
+bottom: 0;
+}
+
+/*searchArea*/
+.searchArea{
+max-width: none;
+height:fit-content;
+position: absolute;
+top:101px;
+left:0;
+max-height: 0;
+width:100%;
+background-color: #fff;
+padding:0 20px;
+z-index:2;
+transition: 0.4s;
+}
+.searchArea>div{
+position: relative;
+
+
+}
+.searchArea .searchBox{
+position: relative;
+width:100%;
+max-width: 600px;
+max-height: 0;
+margin: 0 auto;
+padding:0;
+overflow: hidden;
+transition: 0.4s;
+}
+.searchBox>div{
+width:100%;
+}
+.searchBox>div input{
+max-width: 600px;
+width:100%;
+padding:10px 0;
+font-size: 1.2rem;
+line-height: 2rem;
+border: none;
+border-bottom: 3px solid #000;
+background-color: transparent;
+}
+.searchBox input:focus-visible {
+outline: none;
+}
+.searchBox .search-icon{
+position:absolute;
+right:0;
+top:50%;
+transform: translatey(-50%);
+width:32px;
+height:32px;
+cursor: pointer;
+}
+.search-close-btn{
+width:50px;
+height:50px;
+position: absolute;
+bottom:-70px;
+left:50%;
+transform: translateX(-50%);
+z-index: 11;
+filter: invert(1);
+opacity: 0;
+visibility: hidden;
+transition: 0.4s;
+cursor: pointer;
+}
+
+/*BG*/
+.black-bg,.nav-black-bg{
+    max-width: none;
+    position: fixed;
+    max-height: 0;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index:9;
+}
+
+/*콘텐츠 영역*/
+.container{
+    padding-top:100px;
+}
+article>div{
+    max-width: 1200px;
+    margin:0 auto;
+}
+article{
+    padding: 50px 20px 100px;
+}
+
+
+/*topBtn*/
+
+.topBtn {
+    position: fixed;
+    background-color: #0890c0;
+    padding: 15px;
+    bottom: 40px;
+    right: 40px;
+    z-index: 2;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+
+/*footer*/
+
+footer {
+    background-color: #000;
+    padding: 30px 20px 100px;
+    border-top: 1px solid #333;
+    color: #aaa;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+footer>div {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+footer .footer-top {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #aaa;
+}
+
+footer .footer-top select {
+    padding: 10px;
+}
+
+.footer-top ul {
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.footer-top ul li {
+    margin-right: 20px;
+}
+
+footer .footer-bottom {
+    padding-top: 30px;
+}
+
+footer .footer-bottom .logo {
+    width: fit-content;
+    margin: 0 auto;
+    height: 100px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+    
+    
+}
+@media screen and (min-width: 1024px) {
+    header .pc{
+        display:block;
+    }
+    footer .pc {
+        display: block;
+    }
+    .pc {
+        display: block;
+    }
+    .mo {
+        display: none;
+    }
+}

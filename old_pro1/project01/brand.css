@@ -1,0 +1,414 @@
+/*공용 class*/
+
+.titleBox {
+    margin-bottom: 20px;
+    text-align: center;
+}
+/*개별*/
+.titleBox h2{
+    margin-bottom: 10px;
+}
+.swiper-container{
+    overflow: hidden;
+}
+.swiper-container .swiper-slide{
+    transition: 0.4s;
+}
+.design .swiper-container .swiper-slide:not(.swiper-slide-active){
+    opacity: 0.8;
+    transform: scale(0.8);
+}
+.swiper-container .swiper-horizontal>.swiper-pagination-bullets,.swiper-container .swiper-pagination-bullets.swiper-pagination-horizontal {
+    width: fit-content;
+    margin:20px auto;
+    z-index: 5;
+}
+.swiper-container .swiper-pagination-bullet{
+    width: 15px;
+    height:15px;
+    background-color: #000;
+    transition: 0.4s;
+}
+.swiper-container .swiper-pagination-bullet-active{
+    width: 40px;
+    
+    border-radius: 10px;
+}
+
+/*콘텐츠 영역*/
+
+.container {
+    padding-top: 100px;
+}
+
+article {
+    padding: 50px 20px 100px;
+}
+
+article>div {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/*title*/
+
+.titleArea {
+    background-image: url("https://i.ibb.co/Brq08pJ/faq-bg-img.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.titleArea::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.titleArea>div {
+    position: relative;
+    z-index: 1;
+}
+
+.titleArea p {
+    padding: 30px;
+}
+
+
+/*main-visual*/
+
+.main-visual {
+    position: relative;
+}
+
+.main-visual .visual-imgBox {
+    position: relative;
+    overflow: hidden;
+}
+.main-visual .visual-imgBox img{
+    width: 100%;
+    height: 100%;
+    
+    object-fit: cover;
+    object-position: center;
+}
+
+.main-visual .textArea {
+    width: 100%;
+    height: 100%;
+    max-width: 1240px;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+}
+
+.main-visual .textArea>div {
+    height: 100%;
+    flex-direction: column;
+}
+
+.visual-title {
+    margin-bottom: 20px;
+}
+
+.visual-price {
+    margin-top: auto;
+    display: flex;
+}
+
+.visual-price div {
+    margin-right: 10px;
+    align-self: flex-end;
+}
+
+.visual-price div span {
+    font-size: 1.5rem;
+}
+
+.main-visual .textArea button {
+    color: #fff;
+    background-color: #000;
+}
+.main-visual .textArea button:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+.visual-spec {
+    margin-top: 20px;
+}
+
+.visual-spec ul li {
+    width: 156px;
+    padding: 5px;
+    text-align: center;
+}
+
+.main-visual .textArea img {
+    width: 50px;
+    filter: invert(1);
+}
+
+.main-visual .textArea .imgBox {
+    margin-bottom: 10px;
+}
+
+
+/*디자인*/
+.design .swiper-container li{
+    cursor: pointer;
+}
+.design .swiper-container li .imgBox{
+    height:200px;
+}
+.design .swiper-container li .imgBox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.design .swiper-container li .textBox h3{
+    margin-bottom: 10px;
+    text-align: center;
+}
+.design .swiper-container li .textBox p{
+    text-align: justify;
+    letter-spacing: -1px;
+    word-break: break-all;
+}
+
+/* 퍼포먼스, 편의사항, GTS*/
+.configuration{
+    padding:0;
+}
+
+.configuration>div{
+    position: relative;
+    max-width: none;
+}
+.configuration .titleBox{
+    width: 100%;
+    position: absolute;
+    top:60px;
+    z-index: 1;
+    color:#fff;
+}
+.performance .titleBox{
+    color: #000;
+}
+.configuration .titleBox p{
+    max-width: 1000px;
+    padding:0 20px;
+    margin: 0 auto;
+}
+.configuration .content{
+    position: relative;
+}
+.configuration .content>div:not(.bg-img){
+    max-width: 1240px;
+    width: 100%;
+    padding:0 20px;
+    position: absolute;
+    transform: translatex(-50%);
+    bottom:10px;
+    left:50%;
+}
+
+.configuration .content>div:not(.bg-img)>div{
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+}
+.configuration .content>div:not(.bg-img)>div .textBox{
+    padding:30px;
+}
+.configuration .content>div:not(.bg-img)>div h3{
+    margin-bottom: 20px;
+}
+.configuration .content>div:not(.bg-img)>div p{
+    text-align: justify;
+    letter-spacing: -1px;
+    word-break: break-all;
+}
+.configuration .content>div:not(.bg-img)>div .imgBox{
+    height: 0;
+}
+.bg-img{
+    height:1100px;
+    overflow: hidden;
+}
+.convenience .bg-img{
+    height:1000px;
+}
+.performance .bg-img{
+    height:1260px;
+}
+.bg-img>div{
+    height: 100%;
+}
+.bg-img img{
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+/*car-911-models*/
+.car-911-models .tabs{
+    border: 1px solid #aaa;
+}
+.car-911-models .tabs>div{
+    width: calc((100% / 4));
+    padding:20px 0;
+    text-align: center;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.car-911-models .tabs>div:not(:first-child){
+    border-left: 1px solid #aaa;
+}
+.car-911-models .tabs>div.active{
+    background-color: #000;
+    color:#fff;
+}
+.car-911-models .content{
+    margin-top:40px;
+}
+.car-911-models .content ul li{
+    width: calc((100% - 20px) / 2);
+    max-width:303px;
+    margin-bottom: 20px;
+    height: auto;
+    border: 1px solid #aaa;
+    padding:0 10px;
+    transition: border-color 0.4s;
+    cursor: pointer;
+}
+
+.car-911-models .content ul li:hover{
+    border: 4px solid #950014;
+}
+.car-911-models .content ul li h3{
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    margin-bottom: 10px;
+}
+.car-911-models .content ul li p{
+    color:#333;
+}
+
+@media screen and (min-width: 768px) {
+    .visual-imgBox .mo{
+        display: none;
+    }
+    .visual-imgBox .pc{
+        display: block;
+    }
+    .main-visual .textArea .imgBox.pc{
+        display: block;
+    }
+    .visual-spec ul li{
+        width: 122px;
+    }
+    .textArea>div>div:not(.visual-title){
+        display: flex;
+        justify-content: space-between;
+    }
+    .visual-price{
+        margin-top: 0;
+        align-self: center;
+    }
+    .car-911-models .content ul li{
+        width: calc((100% - 40px) / 3);
+    }
+    .car-911-models .content ul li:nth-child(11){
+        margin-left: 20px;
+        margin-right: auto;
+    } 
+    .car-911-models .content ul li:nth-child(12){
+        margin-left: 20px;
+        margin-right: auto;
+    }
+    .car-911-models .content ul li:nth-child(14){
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .car-911-models .content ul li:nth-child(14).active{
+        margin-left: 20px;
+        margin-right: auto;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .main-visual .visual-imgBox{
+        max-height: 650px;
+    }
+    .main-visual .visual-imgBox img{
+        max-height: 650px;
+    }
+    .visual-spec ul li{
+        width: 216px;
+    }
+    .visual-spec ul li>div{
+        display: flex;
+    }
+    .visual-spec ul li .textBox{
+        padding: 20px 0 20px 20px;
+    }
+
+    .car-911-models .content ul li{
+        width: calc((100% - 60px) / 4);
+    }
+    .car-911-models .content ul li:nth-child(11){
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .car-911-models .content ul li:nth-child(12){
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .car-911-models .content ul li:nth-child(14){
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .car-911-models .content ul li:nth-child(14).active{
+        margin-left: 20px;
+        margin-right: auto;
+    }
+    
+
+    .configuration .content>div:not(.bg-img){
+        transform: translate(-50%, -50%);
+        top:50%;
+        left:50%;
+    }
+    .performance .content>div:not(.bg-img){
+        transform: translate(-50%, -35%);
+    }
+    .bg-img{
+        height:700px;
+        overflow: hidden;
+    }
+    .performance .bg-img{
+        height:920px;
+    }
+    .configuration .content>div:not(.bg-img){
+        display: flex;
+        justify-content: space-between;
+    }
+    .configuration .content>div:not(.bg-img)>div{
+        width: calc((100% - 40px) / 3);
+        height: 100%;
+    }
+    .performance .content>div:not(.bg-img)>div{
+        height: 568px;
+    }
+}

@@ -1,0 +1,192 @@
+/*공용 class*/
+
+.titleBox {
+    margin-bottom: 20px;
+}
+
+
+/*콘텐츠 영역*/
+
+.container {
+    /* margin-top: 90px; */
+    padding-top: 100px;
+}
+
+article {
+    padding: 50px 20px 100px;
+}
+
+article>div {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/*title*/
+
+.titleArea {
+    /* background-image: url("https://i.ibb.co/Brq08pJ/faq-bg-img.jpg"); */
+    background-image: url("./img/faq-bg-img.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.titleArea::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.titleArea>div {
+    position: relative;
+    z-index: 1;
+}
+
+.titleArea p {
+    padding: 30px;
+}
+
+
+/*faq*/
+
+.faq {
+    border: none;
+    border-radius: 10px;
+    padding: 60px 20px;
+    margin: 100px auto;
+}
+
+.tabs ul li.active {
+    background-color: #000;
+    color: #fff;
+}
+
+.faq .content>ul>li li {
+    position: relative;
+}
+
+.faq .content>ul>li li>:first-child {
+    position: relative;
+}
+
+.faq .content>ul>li li>:first-child::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 30px;
+    top: 50%;
+    transform: translatey(-50%);
+    background-image: url("https://i.ibb.co/sp7q3Xz/agregar.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.faq .content>ul>li li>:first-child.active::after {
+    background-image: url("https://i.ibb.co/KD6FPYk/menos.png");
+}
+.faq>div>:first-child ul{
+    border: 1px solid #aaa;
+}
+.faq>div>:first-child ul li {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    /* border: 1px solid #ddd; */
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+.faq>div>:first-child ul li:not(:first-child) {
+    border-left:1px solid #aaa ;
+}
+
+.faq>div>:first-child ul li span {
+    color: #aaa;
+    font-size: 0.8rem;
+}
+
+.faq>div>:first-child ul li:first-child span {
+    color: white;
+}
+
+.faq>div>:nth-child(2) ul ul {
+    border: 1px solid black;
+    border-left: none;
+    border-right: none;
+    margin: 40px 0;
+}
+
+.faq>div>:nth-child(2)>ul>li:not(:first-child) {
+    display: none;
+}
+
+.faq>div>:nth-child(2) ul ul li>div {
+    display: flex;
+    /*justify-content: space-between;*/
+    padding: 40px 30px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+.faq>div>:nth-child(2) ul ul li>div>p{
+    padding-right:40px;
+}
+.faq>div>:nth-child(2) ul ul li>:last-child {
+    background-color: #eaeaea;
+    max-height: 0;
+    padding: 0 30px;
+    overflow: hidden;
+    transition: 0.4s;
+    /* display: none; */
+}
+
+.faq>div>:nth-child(2) ul ul li>:last-child.active {
+    padding: 40px 30px;
+}
+
+.faq>div>:nth-child(2) ul ul li>div div {
+    width: 130px;
+    font-weight: 500;
+    padding-right: 60px;
+    flex-shrink: 0;
+    display: none;
+}
+
+.faq>div>:nth-child(2) ul ul li>:first-child div {
+    color: #aaa;
+}
+
+.faq>div>:last-child {
+    width: 200px;
+    margin: 50px auto 0;
+    font-weight: bold;
+    color: #ccc;
+}
+
+.faq>div>:last-child ul li {
+    padding: 2px 8px;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+}
+
+.faq>div>:last-child ul li.active {
+    border-color: #000 !important;
+    font-size: 1.6rem;
+    color: black;
+}
+
+@media screen and (min-width: 768px) {
+    .faq>div>:nth-child(2) ul ul li>div div{
+        display: block;
+    }
+}

@@ -1,0 +1,38 @@
+<svg id="Displacement" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_3995" data-name="사각형 3995" width="40" height="40" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_5125" data-name="그룹 5125" clip-path="url(#clip-path)">
+    <g id="그룹_5124" data-name="그룹 5124">
+      <g id="그룹_5123" data-name="그룹 5123" clip-path="url(#clip-path)">
+        <g id="그룹_5122" data-name="그룹 5122" opacity="0">
+          <g id="그룹_5121" data-name="그룹 5121">
+            <g id="그룹_5120" data-name="그룹 5120" clip-path="url(#clip-path)">
+              <rect id="사각형_3986" data-name="사각형 3986" width="40" height="40" fill="#fff"/>
+              <g id="그룹_5119" data-name="그룹 5119">
+                <g id="그룹_5118" data-name="그룹 5118" clip-path="url(#clip-path)">
+                  <g id="그룹_5117" data-name="그룹 5117" opacity="0">
+                    <g id="그룹_5116" data-name="그룹 5116">
+                      <g id="그룹_5115" data-name="그룹 5115" clip-path="url(#clip-path)">
+                        <rect id="사각형_3987" data-name="사각형 3987" width="40" height="40" fill="#fff"/>
+                        <rect id="사각형_3988" data-name="사각형 3988" width="40" height="40" fill="#fff"/>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+        <path id="패스_8955" data-name="패스 8955" d="M6.765,11.01V24.578a7.941,7.941,0,1,0,15.882,0V15.533a2.647,2.647,0,1,1,5.294,0V28.769" fill="none" stroke="#fff" stroke-width="1"/>
+        <path id="패스_8956" data-name="패스 8956" d="M33.235,28.769V15.532a7.941,7.941,0,0,0-15.882,0v9.046a2.647,2.647,0,1,1-5.294,0V11.01" fill="none" stroke="#fff" stroke-width="1"/>
+        <rect id="사각형_3992" data-name="사각형 3992" width="8.824" height="3.529" transform="translate(5 7.481)" fill="none" stroke="#fff" stroke-width="1"/>
+        <rect id="사각형_3993" data-name="사각형 3993" width="8.824" height="3.529" transform="translate(26.176 28.77)" fill="none" stroke="#fff" stroke-width="1"/>
+        <line id="선_857" data-name="선 857" y2="5.294" transform="translate(14.706 27.225)" fill="none" stroke="#fff" stroke-width="1"/>
+        <line id="선_858" data-name="선 858" y2="5.294" transform="translate(25.294 7.592)" fill="none" stroke="#fff" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>

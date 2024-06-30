@@ -1,0 +1,84 @@
+
+/*공용 class*/
+.titleBox{
+    margin-bottom: 20px;
+}
+
+
+/*콘텐츠 영역*/
+.container{
+    /* margin-top: 90px; */
+    padding-top:100px;
+}
+
+article{
+    padding: 50px 20px 100px;
+}
+article>div{
+    max-width: 1200px;
+    margin:0 auto;
+}
+
+/*title*/
+.titleArea{
+    background-image: url("https://i.ibb.co/qN5dbzr/news-bg-img.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+.titleArea::before{
+    content: "";
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color: rgba(0,0,0,0.5);
+}
+.titleArea>div{
+    position: relative;
+    z-index: 1;
+}
+.titleArea p{
+    padding:30px;
+}
+
+/*news*/
+.news table{
+    width:100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+.news thead{
+    background-color: #ddd;
+}
+.news th{
+    padding:20px;
+    text-align: center;
+}
+.news td{
+    padding:20px;
+}
+.news tbody tr{
+    border-bottom:1px solid #aaa ;
+    cursor: pointer;
+}
+.item-num{
+    text-align: center;
+}
+.news td.item-title{
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    padding:0 20px;
+    margin:20px 0;
+}
+.news tbody tr:hover .item-title{
+    font-weight: 600;
+}

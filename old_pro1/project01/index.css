@@ -1,0 +1,944 @@
+svg{
+    width:100%;
+    height: fit-content;
+}
+input[type="range"]{
+    -webkit-appearance: none; /* 기본 CSS 스타일을 적용하지 않기 위해서 */
+    width: 100%; /* 슬라이더 길이 */
+    height: 2px; /* 슬라이더 두께 */
+    border-radius: 5px; /* 슬라이더 모서리를 약간 둥글게 */
+    background: #000; /* 슬라이더 색상 */
+    outline: none; /* 슬라이더 테두리 없이 */
+    vertical-align: middle;
+}
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none; /* 기본 CSS 스타일을 적용하지 않기 위해서 */
+    appearance: none; /* 기본 CSS 스타일을 적용하지 않기 위해서 */
+    width: 25px; /* 슬라이더 핸들 길이 */
+    height: 25px; /* 슬라이더 핸들 높이 */
+    border-radius: 50%; /* 핸들 모양을 원모양으로 만들기 위함 */
+    background: #000; /* 슬라이더 핸들 색상 */
+    cursor: pointer; /* 슬라이더 핸들에 마우스를 갖다대면 포인터로 변경 */
+}
+
+.swiper-slide-container{
+    position: relative;
+}
+.swiper-container {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding:20px; 
+}
+.swiper-container-v{
+    padding:0;
+}
+.swiper-container .swiper-horizontal>.swiper-pagination-bullets,.swiper-container .swiper-pagination-bullets.swiper-pagination-horizontal {
+    width: fit-content;
+    margin:20px auto;
+    z-index: 5;
+}
+.swiper-wrapper li{
+    flex-shrink: 0;
+}
+.swiper-container .swiper-pagination-bullet{
+    background-color:#fff;
+    transition: 0.4s;
+}
+.main .swiper-pagination-bullet{
+    width: 50px;
+    height:2px;
+    border-radius: 5px;
+}
+.swiper-container .swiper-pagination-bullet-active{
+    width:20px;
+    border-radius: 8px;
+}
+.main .swiper-pagination-bullet-active{
+    width: 50px;
+    height:5px;
+}
+.swiper-container .swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal{
+    bottom:0;
+    height:10px;
+}
+.swiper-container .swiper-button{
+    color:#fff
+}
+
+/**/
+.imgBox{
+    overflow: hidden;
+    position: relative;
+}
+.textBox{
+    padding:20px;
+}
+.titleBox{
+    margin-bottom: 40px;
+}
+.logo img{
+    width: auto;
+    height:100%;
+}
+
+/*콘텐츠 영역*/
+.container{
+    /* margin-top: 90px; */
+    padding-top:100px;
+}
+article>div{
+    max-width: 1200px;
+    margin:0 auto;
+}
+article{
+    padding: 50px 20px 100px;
+}
+
+/*main*/
+.main{
+    position: relative;
+    padding-bottom:50px;
+    background-color: #242424;
+}
+.main .swiper-container{
+    padding:0;
+}
+.main  ul li>div{
+    position: relative;
+}
+.main .imgBox{
+    position: relative;
+    height: 100%;
+}
+.main .swiper-container .imgBox::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    background-color: rgba(0,0,0,0.3);
+}
+.main ul li>div{
+    height:650px;
+}
+.main .swiper-container .imgBox img{
+    height: 100%;
+    object-fit: cover;
+}
+.main .textBox{ 
+    width: 80%;
+    position: absolute;
+    bottom:25%;
+    left:10%;
+    color:#fff;
+}
+.main .textBox p{
+    margin-top: 5px;
+}
+.main .swiper-container .swiper-pagination-bullets.swiper-pagination-horizontal{
+    width:232px;
+    position: absolute;
+    bottom: 120px;
+    left:50%;
+    transform: translatex(-50%);
+}
+.main .find-btns{
+    width:360px;
+    padding:0 20px;
+    position: absolute;
+    bottom:20px;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.main .find-btns>div{
+    position: relative;
+}
+.main .find-btns>div>div{
+    /* max-width: 230px;
+    min-width:200px;
+    width: 70%; */
+    /* margin:0 auto; */
+    width: 100px;
+    transition: 0.4s;
+    position: relative;
+    left:0;
+    bottom:0;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.main .find-btns>div>div::after{
+    content: "";
+    display: block;
+    background-color: #fff;
+    width:100%;
+    padding:10px;
+    padding-top: 0;
+    height:fit-content;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: 500;
+}
+.main .find-btns>div>div.number-search::after{
+    content: "차량번호로 찾기";
+}
+.main .find-btns>div>div.type-search::after{
+    content: "차종으로 찾기";
+}
+.main .find-btns>div>div.size-search::after{
+    content: "사이즈로 찾기";
+}
+.main .find-btns>div>div.active{
+    position: absolute;
+    left:0; 
+    bottom:30px;
+    z-index: 5;
+}
+.main .find-btns>div>div.active .imgBox{
+    width:270px;
+
+}
+.main .find-btns>div>div .imgBox{
+    height: fit-content;
+}
+
+.main .find-btns>div>div img{
+    width:330px;
+    filter: grayscale(1);
+    
+}
+.main .find-btns>div>div:hover img{
+    filter: grayscale(0);
+}
+
+/*product-type*/
+.product-type .content>div>div:not(:first-child)>div,.product-type .content>div>div:first-child>div>div>div{
+    position: relative;
+    height:150px;
+    cursor: pointer;
+}
+.product-type .content>div>div:first-child>div>div>div>div{
+    height:100%;
+}
+.product-type .content>div>div .imgBox{
+    width:100%;
+    height: 100%;
+}
+.product-type .content>div>div .imgBox img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    object-position: center;
+}
+.product-type .content>div>div:not(:first-child):hover img,.product-type .content>div>div:first-child>div>div>div:hover img{
+    transform: scale(1.2);
+}
+.product-type .content>div>div .textBox{
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    color:#fff;
+    transition: 0.4s;
+}
+.product-type .content>div>div .textBox button{
+    margin-top: 10px;
+    color:#fff;
+}
+.product-type .content>div>div .textBox button:hover{
+    background-color: #fff;
+    color:#000;
+}
+.product-type .content>div>div:not(:first-child):hover .textBox,.product-type .content>div>div:first-child>div>div>div:hover .textBox{
+    opacity: 1;
+}
+
+/*products*/
+.products{
+    padding:50px 0 100px;
+}
+.products>div{
+    max-width: none;
+}
+.products .titleBox{
+    max-width: 1240px;
+    margin: 0 auto 40px;
+    padding:0 20px;
+}
+.tabs .swiper-container{
+    padding:0;
+}
+.tabs .swiper-horizontal>.swiper-pagination-bullets,.tabs .swiper-pagination-bullets.swiper-pagination-horizontal{
+    position: absolute;
+    bottom:10px;
+    left:50%;
+    transform: translateX(-50%);
+}
+.tabs ul li{
+    position: relative;
+    height: 270px;
+}
+
+.tabs ul li>div, .tabs .imgBox{
+    height:100%;
+}
+.tabs .imgBox::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    background-color: rgba(0,0,0,0.5);
+}
+.tabs .imgBox img{
+    height:100%;
+    object-fit: cover;
+    object-position: center;
+}
+.tabs .textBox{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    color:#fff;
+}
+.tabs .textBox h3{
+    font-size: 3rem;
+}
+.products .content ul li{
+    background-color: #fff;
+    overflow: hidden;
+}
+.products .content .swiper-container-v{
+    padding:20px 0 50px;
+}
+.products .content .swiper-container-v ul li{
+    width:373px;
+    margin-right: 20px;
+    border: 1px solid #aaa;
+    top:0;
+    transition: 0.4s;
+}
+.products .content .swiper-container-v ul li:hover{
+    border-color: crimson;
+    top:20px;
+}
+
+/*shoppingTools*/
+.shoppingTools .content>div>div{
+    
+    width:100%;
+    height:100px;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+    position: relative;
+    word-break: normal;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.shoppingTools .content>div>div:hover img{
+    transform: scale(1.2);
+}
+.shoppingTools .content>div>div.active{
+    width: 100%; 
+    height:274px;
+}
+.shoppingTools .content>div>div>div,.shoppingTools .content .imgBox{
+    height:100%;
+}
+.shoppingTools .content .imgBox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.shoppingTools .content>div>div.active .imgBox::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    background-color: rgba(0,0,0,0.5);
+}
+.shoppingTools .content .textBox{
+    position: absolute;
+    width: fit-content;
+    bottom:0;
+    left:0;
+    color:#fff;
+    opacity: 0;
+    transition: 0.4s;
+}
+.shoppingTools .content .textBox h3{
+    word-break: normal;
+    font-size: 1.4rem;
+}
+.shoppingTools .content>div>div.active .textBox{
+    opacity: 1;
+}
+
+/*discover*/
+.discover .swiper-container{
+    padding:20px 0;
+}
+.discover ul li{
+    width:33%;
+    margin-left: 5px;
+    position: relative;
+    cursor: pointer;
+}
+.discover ul li:hover img{
+    transform: scale(1.2);
+}
+.discover ul li:hover .imgBox::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    background-color: rgba(0,0,0,0.5);
+}
+.discover .textBox{
+    position: absolute;
+    bottom:0;
+    left:0;
+    opacity: 0;
+    transition: 0.4s;
+    color:#fff;
+}
+.discover ul li:hover .textBox{
+    opacity: 1;
+}
+.discover .swiper-container .swiper-pagination-bullet{
+    background-color: #000;
+}
+
+/*exterior*/
+.exterior{
+    background-color: #242424;
+}
+.exterior h2,.exterior h3{
+    color:#fff;
+}
+.exterior h3{
+    margin-bottom: 10px;
+}
+.exterior .textBox{
+    padding-left: 0;
+}
+.exterior select{
+    font-size: 1.2rem;
+    padding:10px;
+}
+.exterior .exterior-color{
+    margin-top: 20px;
+    /* width:300px;
+    margin: 20px auto 0; */
+}
+.exterior .exterior-color ul li{
+    width:40px;
+    height:40px;
+    margin-right: 15px;
+    border: 1px solid #aaa;
+    position: relative;
+    cursor: pointer;
+}
+.exterior .exterior-color ul li.exterior-white{
+    background-color: white;
+}
+.exterior .exterior-color ul li.exterior-black{
+    background-color: black;
+}
+.exterior .exterior-color ul li.exterior-red{
+    background-color: red;
+}
+.exterior .exterior-color ul li.exterior-green{
+    background-color: green;
+}
+.exterior .exterior-color ul li.exterior-blue{
+    background-color: royalblue;
+}
+.exterior .exterior-color ul li.exterior-yellow{
+    background-color: yellow;
+}
+.exterior .exterior-color ul li.active::after{
+    content: "✔";
+    display: inline-block;
+    position: absolute;
+    top:-10px;
+    right:-10px;
+    text-align: center;
+    width: 24px;
+    background-color: rgb(255,255,255);
+    border-radius: 50%;
+}
+
+/*installment 할부*/
+.installment input[type="text"]{
+    text-align: right;
+}
+.installment .car-type-tab{
+    width:100%;
+    margin-bottom: 40px;
+    border: 1px solid #aaa;
+}
+.installment .car-type-tab>div>div{
+    width:calc((100% / 3));
+    /* min-width: 109px; */
+    padding:15px;
+    /* margin-right:10px; */
+    cursor: pointer;
+}
+.installment .car-type-tab>div>div:nth-child(1){
+    
+    border-bottom: 1px solid #aaa;
+}
+.installment .car-type-tab>div>div:nth-child(2){
+    border-bottom: 1px solid #aaa;
+    border-left: 1px solid #aaa;
+    border-right: 1px solid #aaa;
+}
+.installment .car-type-tab>div>div:nth-child(3){
+    
+    border-bottom: 1px solid #aaa;
+}
+.installment .car-type-tab>div>div:nth-child(5){
+    border-right: 1px solid #aaa;
+    border-left: 1px solid #aaa;
+}
+.installment .car-type-tab>div>div.active{
+    background-color: #000;
+    color:#fff;
+}
+
+.installment .content>div>div{
+    /* width:calc((40% - 20px)); */
+    border: 1px solid #aaa;
+    padding:20px;
+    margin-bottom: 20px;
+}
+
+.installment .calculator-titleBox{
+    margin-bottom: 40px;
+}
+.installment .calculator-titleBox h3{
+    margin-bottom: 10px;
+}
+.installment .calculator-titleBox>div p{
+    margin-right:10px;
+    color:#777;
+}
+.installment .calculator{
+    border-bottom: 1px solid #aaa;
+    margin-bottom: 40px;
+}
+.installment .calculator>div{
+    margin-bottom: 40px;   
+}
+
+.installment .calculator>div>div>div:nth-child(2)>:first-child{
+    background-color: #eee;
+    display: flex;
+    justify-content: right;
+    line-height: 54px;
+}
+.installment .calculator>div>div>div:nth-child(2)>:first-child input{
+    width:80%;
+    font-size: 1rem;
+    line-height: 1rem;
+    border: none;
+    padding:20px 0;
+    margin-right:5px;
+    background-color: transparent;
+}
+
+.installment .principal{
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color:#aaa;
+}
+.installment .calculator h3{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.installment .range-area{
+    margin-bottom: 40px;
+}
+.installment .range-area>div:first-child{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+
+.installment .monthly-payment{
+    text-align: right;
+}
+.installment .moreArea{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.installment button{
+    border-color: #000;
+    color:#000;
+}
+.installment button:hover{
+    background-color: #000;
+    color:#fff
+}
+.installment .modelArea{
+    background-image: url("https://files.porsche.com/filestore/image/multimedia/none/modelseries-macan-pa-backplate/normal/f2242816-9100-11ea-80c9-005056bbdc38;sK;twebp/porsche-normal.webp");
+    background-repeat: no-repeat;
+    background-size: 920px;
+    background-position: center -150px;
+    background-color: #000;
+    color:#fff;
+}
+.installment .modelArea h3{
+    margin-bottom: 40px;
+}
+.installment .modelArea .imgBox{
+    margin-bottom: 40px;
+}
+.installment .modelArea .textBox{
+    padding-bottom: 0;
+}
+.installment .modelArea .textBox>div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.installment .modelArea .textBox div.price{
+    justify-content: right;
+}
+.installment .modelArea button{
+    border-color: #fff;
+    color:#fff;
+}
+.installment .modelArea button:hover{
+    background-color: #fff;
+    color:#000;
+}
+.installment .modelArea .textBox>div.buttonArea{
+    border-top: 1px solid #aaa;
+    padding-top:40px;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+.installment .modelArea .buttonArea button{
+    width: calc((100% - 40px) / 2);
+    min-width: 142px;
+    margin: 0 auto 20px;
+}
+
+/*service*/
+.service{
+    padding:50px 0 100px;
+}
+.service>div{
+    max-width: none;
+}
+.service .titleBox{
+    max-width: 1240px;
+    margin: 0 auto 40px;
+    padding:0 20px;
+}
+.service .content>div>div{
+    width:50%;
+    position: relative;
+    cursor: pointer;
+}
+.service .content>div>div:hover img{
+    transform: scale(1.2);
+}
+.service .content .textBox{
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color: rgba(0,0,0,0.5);
+    color:#fff;
+    
+}
+.service .content .textBox h3{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+.service .content .imgBox{
+    height:100%;
+}
+.service .content .imgBox img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+/*sns*/
+.sns .swiper-container{
+    padding:20px 0;
+}
+.sns .content .swiper-slide{
+    width:33%;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.sns .content .swiper-slide:hover img{
+    transform: scale(1.2);
+}
+.sns .content .swiper-slide>div>p{
+    margin-bottom: 10px;
+}
+.sns .content .swiper-slide>div>p::before{
+    content: "";
+    display: inline-block;
+    width:24px;
+    height:24px;
+    margin-right:5px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: invert(1);
+}
+.sns .content .facebook-icon::before{
+    background-image: url("https://www.nexentire.com/kr/assets/images/main.v2/sns_ico_f.png");
+}
+.sns .content .instagram-icon::before{
+    background-image: url("https://www.nexentire.com/kr/assets/images/main.v2/sns_ico_i.png");
+}
+.sns .content .youtube-icon::before{
+    background-image: url("https://www.nexentire.com/kr/assets/images/main.v2/sns_ico_y.png");
+}
+.sns .content .imgBox{
+    height:206px;
+}
+.sns .content .imgBox img{
+    height:100%;
+    object-fit: cover;
+    object-position: center;
+}
+.sns .content .textBox{
+    padding-left:0;
+}
+.sns .content .textBox p{
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin: 30px 0;
+    color:#777;
+}
+.sns .swiper-container .swiper-pagination-bullet{
+    background-color: #000;
+}
+
+@media screen and (max-width: 480px) {
+    .service .content>div>div{
+        width:100%;
+    }
+}
+@media screen and (min-width: 768px) {
+    
+    .main{
+        padding-bottom:0;
+    }
+    .main .swiper-container .swiper-pagination-bullets.swiper-pagination-horizontal{
+        bottom:80px;
+    }
+    .main .find-btns{
+        max-width:770px;
+        width:100%;
+        padding:0 20px;
+        position: absolute;
+        bottom:20px;
+        left:50%;
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+    .main .find-btns>div{
+        display: flex;
+        justify-content:space-between;
+    }
+    .main .find-btns>div>div{
+        max-width: 230px;
+        width: calc((100% - 40px) / 3);
+    }
+    .main .find-btns>div>div img{
+        width:100%;
+    }
+    .main .find-btns>div>div::after{
+        display: none;
+    }
+
+    .product-type .content>div{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .product-type .content>div>div{
+        margin-bottom: 20px;
+    }
+    .product-type .content>div>div:not(:first-child){
+        width:calc((100% - 60px) / 4);
+    }
+    .product-type .content>div>div:nth-child(2){
+        width:calc((100% - 20px) / 2);
+    }
+    .product-type .content>div>div:nth-child(3){
+        width:calc((((100% - 60px) / 4) * 3) + 40px);
+    }
+    .product-type .content>div>div:not(:first-child):nth-child(3)>div{
+        padding-top:calc((100% - 40px) / 3);
+    }
+    .product-type .content>div>div:first-child>div{
+        padding-top: 100%;
+        position: relative;
+    }
+    .product-type .content>div>div:first-child>div>div{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        position: absolute;
+        top:0;
+        bottom:0;
+        right:0;
+        left:0;
+        align-content: space-between;
+    }
+    .product-type .content>div>div:first-child>div>div>div{
+        height:calc((100% - 20px ) / 2);
+    }
+    .product-type .content>div>div:first-child>div>div>div:nth-child(3){
+        width:100%;
+    }
+    .product-type .content>div>div:first-child,.product-type .content>div>div:first-child>div>div>div{
+        width:calc((100% - 20px) / 2);
+    }
+    .product-type .content>div>div:not(:first-child)>div, .product-type .content>div>div:first-child>div>div>div>div{
+        padding-top: 100%;
+    }
+    .product-type .content .imgBox{
+        position: absolute;
+        top:0;
+        left:0;
+    }
+    .product-type .content>div>div .textBox{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .product-type .content>div>div .textBox button{
+        width: fit-content;
+        margin-top: 20px;
+    }
+    .product-type .content>div>div .textBox *{
+        align-self: center;
+    }
+
+    .shoppingTools .content>div{
+        display: flex;
+    }
+    .shoppingTools .content>div>div{
+        width:15%;
+        border-left: 3px solid #fff;
+        border-right: 3px solid #fff;
+        /* height:274px; */
+        height:490px;
+    }
+    .shoppingTools .content>div>div.active{
+        width: 55%;
+        height:490px;
+    }
+
+    .tabs ul li {
+        height: 25vw;
+        max-height: 400px;
+    }
+
+    .exterior .textBox{
+        display: flex;
+    }
+    .exterior .textBox>div{
+        margin-right:20px;
+        margin-top: 0;
+    }
+    .exterior select{
+        font-size: 1.5rem;
+        padding:10px;
+    }
+
+    .installment .car-type-tab>div>div{
+        width: calc((100% / 6));
+        min-width: 109px;
+    }
+    .installment .car-type-tab>div>div:not(:nth-child(4),:nth-child(5),:nth-child(6)){
+        border-bottom: 0;
+    }
+    .installment .car-type-tab>div>div:nth-child(4){
+        border-left:1px solid #aaa;
+    }
+    .installment .content>div{
+        display: flex;
+        justify-content: space-between;
+    }
+    .installment .content>div>div{
+        width:calc((40% - 20px));
+    }
+    .installment .content>div>div:first-child{
+        width:60%;
+    }
+    .advance-payment-contnet,.installment-period-contnet{
+        display: flex;
+        justify-content: space-between;
+    }
+    .installment .range-area{
+        width:60%;
+    }
+    .installment .calculator>div>div>div:nth-child(2){
+        width:35%;
+        min-width: 162px;
+        margin-left:20px;
+    }
+
+    .installment .modelArea .imgBox{
+        height:236px;
+    }
+
+    .service .content .textBox{
+        padding:40px;
+    }
+    .service .content .textBox h3{
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .pc{
+        display:block;
+    }
+    .service .content>div>div{
+        width: calc(100% / 3);
+    }
+    .products .content{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
