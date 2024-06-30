@@ -1,0 +1,138 @@
+
+
+
+/*개별 class*/
+.red_star::after{
+    content:"*";
+    color:crimson;
+}
+.btn_width{
+    width:100%;
+}
+button{
+    background-color: #ccc;
+}
+.checkbox_group button{
+    background-color: #950014;
+    color:#fff;
+}
+.checkbox_group button:hover{
+    background-color: #196a99;
+}
+
+/*콘텐츠 영역*/
+article {
+    padding: 0 20px 0;
+}
+
+article>div {
+    padding:50px 40px 100px;
+    max-width: 1200px;
+    min-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+}
+
+/*titleArea*/
+.titleArea{
+    width: calc(30% - 40px);
+    padding-right:20px;
+    /* border-right: 1px solid #aaa; */
+}
+
+/*remove_account*/
+.remove_account{
+    max-width: 600px;
+    width: 600px;
+    text-align: center;
+    margin: 0 auto;
+}
+.remove_account>div>div{
+    margin-bottom: 50px;
+}
+.remove_account>div>div:not(:first-child){
+    display: none;
+}
+.remove_account>div>div:not(:first-child).active{
+    display: block;
+}
+.remove_account>div>div>div{
+    margin-bottom:30px;
+}
+.remove_account .tabs{
+    margin-bottom: 30px;
+    border-bottom: 1px solid #aaa;
+}
+.remove_account .tabs>div{
+    width: calc(100% / 3);
+    padding:20px;
+    cursor: pointer;
+}
+.remove_account .tabs>div.active{
+    background-color: #000;
+    color:#fff;
+}
+.remove_account h3{
+    margin-bottom: 20px;
+}
+.remove_account h4{
+    margin-bottom: 10px;
+}
+.remove_account button{
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.remove_account button img{
+    width: 16px;
+    margin-right: 5px;
+}
+.remove_account input:not([type="checkbox"]){
+    width:100%;
+    height:48px;
+    padding:15px 20px;
+    border:1px solid #aaa;
+    border-radius:5px;
+}
+.remove_account input::placeholder {
+    color:#ccc;
+}
+.remove_account input:focus{  
+    border-color:black;
+}
+.remove_account .search-user{
+    text-decoration: none;
+    color:#777;
+    transition: 0.4s;
+}
+
+.remove_account .user-information ul>:nth-child(7) div {
+    position: relative;
+}
+#address_search:hover {
+    background-color: rgb(240,240,240);
+}
+.remove_account img{
+    width:50px;
+}
+
+.remove_account ul>:nth-child(8) ul {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0 20px;
+}
+.remove_account ul>:nth-child(8) ul li{
+    width: 30%;
+}
+.remove_account ul>:nth-child(8) select {
+    border: none;
+    text-align: right;
+    background-color: white;
+    width: calc(100% - 20px);
+    text-align: center;
+    padding:15px 0;
+}
+.remove_account textarea{
+    width:100%;
+}

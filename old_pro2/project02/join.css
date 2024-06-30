@@ -1,0 +1,179 @@
+
+
+
+/*개별 class*/
+.red_star::after{
+    content:"*";
+    color:crimson;
+}
+.btn_width{
+    width:100%;
+}
+button{
+    background-color: #ccc;
+}
+.checkbox_group button{
+    background-color: #950014;
+    color:#fff;
+}
+.checkbox_group button:hover{
+    background-color: #000;
+}
+
+/*콘텐츠 영역*/
+article {
+    padding: 0 20px 0;
+}
+
+article>div {
+    padding:50px 40px 100px;
+    max-width: 1200px;
+    min-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+}
+
+/*titleArea*/
+.titleArea{
+    width: calc(30% - 40px);
+    padding-right:20px;
+    /* border-right: 1px solid #aaa; */
+}
+
+/*join_us*/
+.join_us{
+    max-width: 600px;
+    width: 600px;
+    text-align: center;
+    margin: 0 auto;
+}
+.join_us>div>div{
+    margin-bottom: 50px;
+}
+.join_us .tabs{
+    margin-bottom: 30px;
+    border-bottom: 1px solid #aaa;
+}
+.join_us .tabs>div{
+    width: calc(100% / 3);
+    padding:20px;
+    cursor: pointer;
+}
+.join_us .tabs>div.active{
+    background-color: #000;
+    color:#fff;
+}
+.join_us>div>div:not(:first-child){
+    display: none;
+}
+.join_us>div>div:not(:first-child).active{
+    display: block;
+}
+.join_us h3{
+    margin-bottom: 20px;
+}
+.join_us button{
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.join_us button img{
+    width: 16px;
+    margin-right: 5px;
+}
+.join_us input:not([type="checkbox"]){
+    width:100%;
+    height:48px;
+    padding:15px 20px;
+    border:1px solid #aaa;
+    border-radius:5px;
+}
+.join_us input::placeholder {
+    color:#ccc;
+}
+.join_us input:focus{  
+    border-color:black;
+}
+.join_us .search-user{
+    text-decoration: none;
+    color:#777;
+    transition: 0.4s;
+}
+
+.join_us .user-information ul>:nth-child(7) div {
+    position: relative;
+}
+#address_search:hover {
+    background-color: rgb(240,240,240);
+}
+.join_us ul li img{
+    width: auto;
+    height: 16px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.join_us ul>:nth-child(8) ul {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0 20px;
+}
+.join_us ul>:nth-child(8) ul li{
+    width: 30%;
+}
+.join_us ul>:nth-child(8) select {
+    border: none;
+    text-align: right;
+    background-color: white;
+    width: calc(100% - 20px);
+    text-align: center;
+    padding:15px 0;
+}
+
+
+
+.user-information>ul>li{
+    text-align: left;
+    margin-bottom: 20px;
+}
+.user-information label{
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.checkbox_all label{
+    margin-bottom: 0;
+    font-weight:500;
+}
+.checkbox_all h4{
+    margin-bottom: 10px;
+}
+.checkbox_group{
+    padding-top:20px;
+    border-top: 1px solid #aaa;
+}
+.checkbox_group label{
+    font-weight: 500;;
+}
+.checkbox_group button{
+    margin-top: 20px;
+    
+}
+
+.join_us textarea {
+    width: 100%;
+    height: 300px;
+    padding: 15px 20px;
+    background: #ddd;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    align-content: center;
+}
+
+.join-completion img{
+    width:80px;
+    filter: grayscale(1);
+}

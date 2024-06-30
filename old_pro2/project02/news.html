@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+  <title>changhun</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="news.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- 스크립트 -->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+  <div w3-include-html="header.html"></div>
+  <div class="black-bg"></div>
+  <main>
+    <div>
+        <div class="container">
+            <article class="news">
+                <div>
+                    <div class="titleArea">
+                        <div class="titleBox">
+                            <h2>NEWS</h2>
+                            <p>BOSE의 새로운 소식</p>
+                        </div>
+                        <div class="post-searchArea">
+                            <p>총 <b class="color_red">32</b> 건</p>
+                            <div>
+                                <select>
+                                    <option value="">전체</option>
+                                    <option value="">제목</option>
+                                    <option value="">내용</option>
+                                </select>
+                                <div>
+                                    <input type="text" placeholder="검색어를 입력하세요."><img src="https://www.svgrepo.com/download/127033/magnifying-glass.svg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="postSearch">
+                        <div>
+                            <div>
+                                <section>
+                                    <div><img src="https://cdn.imweb.me/upload/S202206294c0a2cc6190f4/046e2b70d07ff.jpg"></div>
+                                    <div>
+                                        <h4>올인원 앰프, 보스 뮤직 앰플리파이어(Bose Music Amplifier) 출시</h4>
+                                        <p>안녕하세요, 보스입니다. 보스 뮤직 앰플리파이어(Bose Music Amplifier)가 국내 정식 출시되었습니다. 스피커도, 사운드바도 아닌 이 제품이 생소하실 수 있습니다.</p>
+                                        <small>22.12.16</small>
+                                    </div>
+                                </section>
+                                <section>
+                                    <div><img src="https://cdn.imweb.me/upload/S202206294c0a2cc6190f4/00c83b1900ac0.png"></div>
+                                    <div>
+                                        <h4>보스 QC45 헤드폰 리미티드 에디션, 이클립스 그레이 색상 출시</h4>
+                                        <p>안녕하세요, 보스입니다. 보스 QC45 헤드폰(Bose QC45 Headphones)의 신규 컬러, 이클립스 그레이 (Eclipse Gray) 색상이 출시되었습니다.</p>
+                                        <small>22.11.10</small>
+                                    </div>
+                                </section>
+                                <section>
+                                    <div><img src="https://cdn.imweb.me/thumbnail/20221110/09caeff5b4191.png"></div>
+                                    <div>
+                                        <h4>보스 QC 이어버드 2 출시</h4>
+                                        <p>안녕하세요, 보스입니다. 보스 QC 이어버드 2 (Bose QuietComfort® Earbuds II)가 국내 정식 출시되었습니다. 전작인 보스 QC 이어버드 역시 편안한 착용감과 뛰어난 노이즈 캔슬링 성능으로 많은 사랑을 받았죠. 하지만, 완전히 새로워졌습니다.</p>
+                                        <small>22.11.10</small>
+                                    </div>
+                                </section>
+                                <section>
+                                    <div><img src="https://cdn.imweb.me/thumbnail/20220825/be248f16b7299.png"></div>
+                                    <div>
+                                        <h4>보스와 함께 하는 캠핑, 사운드링크 리볼브 II</h4>
+                                        <p>보스 담당자의 캠핑 스피커보스 사운드링크 리볼브 II 안녕하세요, 보스입니다. 휴일 모두 잘 보내셨나요? 캠핑 마니아인 저희 보스팀 마케팅 담당자는 지난 주말 충북 괴산으로지난 주말 충북 괴산으로 캠핑을 다녀왔다고 하는데요.</p>
+                                        <small>22.08.25</small>
+                                    </div>
+                                </section>
+                                <section>
+                                    <div><img src="https://cdn.imweb.me/upload/S202206294c0a2cc6190f4/26a3a2bfb857e.png"></div>
+                                    <div>
+                                        <h4>가장 진화된 노이즈 캔슬링 이어버드의 탄생, QC Earbuds 소프트웨어 업데이트</h4>
+                                        <p>Stone blue(스톤블루), Sandstone(샌드스톤)의 성공적인 신규 컬러 출시에 이어, 21년 9월 24일(*미국 시간 기준) QC 이어버드에 대한 대대적인 소프트웨어 업데이트가 시행되었습니다.</p>
+                                        <small>21.12.13</small>
+                                    </div>
+                                </section>
+                                <section>
+                                    <div><img src="https://cdn.imweb.me/thumbnail/20220812/02578f9803a1a.png"></div>
+                                    <div>
+                                        <h4>공간을 가득 채우는 마법, Soundlink Revolve II 시리즈</h4>
+                                        <p>깊고 강력한 몰입감. 사운드링크 리볼브 II 시리즈 사운드링크 리볼브 II 콤팩트하지만 극강의 사운드를 선사하는 사운드링크 리볼브 II 시리즈를 소개합니다.</p>
+                                        <small>22.01.27</small>
+                                    </div>
+                                </section>
+                            </div>
+                            <div>
+                                <ul class="disFlex flex_option1">
+                                    <li class="active">1</li>
+                                    <li>2</li>
+                                    <li>3</li>
+                                    <li>4</li>
+                                    <li>5</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+  </main>
+  <div class="topBtn">TOP</div>
+  <div w3-include-html="footer.html"></div>
+  <script>
+    includeHTML();
+    //페이지 넘버
+    let faqPageNums = document.querySelectorAll(".postSearch>div>:last-child ul li");
+    window.addEventListener("load", function() {
+        for (let i = 0; i < faqPageNums.length; i++) {
+            faqPageNums[i].addEventListener("click", function() {
+                clearNum();
+                this.classList.add("active");
+            });
+        }
+
+        function clearNum() { //클래스삭제
+            for (let i = 0; i < faqPageNums.length; i++) {
+                faqPageNums[i].classList.remove("active");
+
+            }
+        }
+    });
+  </script>
+</body>
+</html>
