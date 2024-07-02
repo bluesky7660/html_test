@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *:not(h1){
+            font-size: 14px;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        thead{
+            border-top: 1px solid #000;
+        }
+        tr>*{
+            padding: 10px 15px;
+        }
+        tr td:not(:nth-child(2),:nth-child(3)){
+            text-align: center;
+        }
+        tr th:nth-child(3){
+            text-align: left;
+        }
+
+        .notice{
+            background-color: #eee;
+        }
+        .notice td:not(:nth-child(3),:nth-child(4),:nth-child(5)){
+            color:red;
+            font-weight: bold;
+        }
+        .notice span{
+            border: 1px solid rgb(255, 177, 177);
+            background-color: rgb(255, 206, 206);
+            border-radius: 5px;
+            width: 100%;
+            padding:5px;
+            display: inline-block;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Table</h1>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>작성일</th>
+                <th>조회</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="notice">
+                <td ><span>공지</span></td>
+                <td>하늘산의 사주간명 정확도는 어느정도일까요?[4]</td>
+                <td>하늘산</td>
+                <td>10:45</td>
+                <td>292</td>
+            </tr>
+            <tr class="notice">
+                <td><span>공지</span></td>
+                <td>사주명리학 왕초보특상반 62기 황룡기수 선착순 모집[64]</td>
+                <td>하늘산</td>
+                <td>2024.07.01</td>
+                <td>1,152</td>
+            </tr>
+            <tr class="notice">
+                <td><span>공지</span></td>
+                <td>[필독] (처음오신 분) 좋은 운을 끌어 당기는 방법과 운영원칙[12939]</td>
+                <td>하늘산</td>
+                <td>2013.08.07</td>
+                <td>18만</td>
+            </tr>
+            <tr>
+                <td>사주질문게시판</td>
+                <td>[사주질문]장기연애후 합가한지 한달만에 남편이아파요..[1]</td>
+                <td>안나안나</td>
+                <td>11:06</td>
+                <td>38</td>
+            </tr>
+            <tr>
+                <td>자유게시판</td>
+                <td>참 이런 경우를 어찌 해석해야 할 지 어렵긴 하네요.</td>
+                <td>혜명</td>
+                <td>11:05</td>
+                <td>43</td>
+            </tr>
+            <tr>
+                <td>자유게시판</td>
+                <td>미워하면 안되는데... 자꾸 미워하게 되는[1]</td>
+                <td>다크초코</td>
+                <td>11:02</td>
+                <td>24</td>
+            </tr>
+        </tbody> 
+    </table>
+</body>
+</html>

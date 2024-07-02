@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        table,th,td{
+            border-collapse: collapse;
+        }
+        th,td{
+            padding:10px;
+            text-align: center;
+        }
+        table{
+            border-color: #eee;
+            
+        }
+        tr{
+            border-top: 1px solid #000;
+        }
+        th{
+            background-color: #f0f0f0;
+            border: none;
+        }
+        td{
+            border-color: #aaa;
+            border-top-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <h1>Table</h1>
+    <table>
+        <thead>
+            <tr>    
+                <th style="width:100px;height: 20px;" >#</th>
+                <th width="300px">제목</th>
+                <th>작성일</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td >내용</td>
+                <td>내용</td>
+                <td width="100px">내용</td>
+            </tr>
+        </tbody>    
+    </table>
+    <hr>
+    <table>
+        <tr>
+            <th rowspan="2">1</th>
+            <th colspan="2">2</th>
+            <!-- <th>3</th> -->
+        </tr>
+        <tr>
+            <td >dsadq</td>
+            <td >dsadq</td>
+            <!-- <td >dsadq</td> -->
+        </tr>
+    </table>
+</body>
+</html>
