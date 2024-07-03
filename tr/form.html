@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        *{
+            list-style: none;
+            box-sizing: border-box;
+        }
+        main{
+            background-color: #f1f8fe;
+            margin:20px;
+            border: 1px solid #aaa;
+            border-radius: 10px;
+        }
+        main>div{
+            padding:30px;
+        }
+        form{
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #aaa;
+            border-radius: 10px;
+        }
+        button{
+            border-radius: 5px;
+            padding:10px;
+        }
+        input[type="text"],select{
+            width: 200px;
+            height:30px ;
+            margin:5px;
+        }
+        table{
+            width: 100%;
+        }
+        ul{
+            display: flex;
+            justify-content: center;
+        }
+        ul li{
+            width: 42px;
+            height: 42px;
+            border-radius: 5px;
+            text-align: center;
+            padding: 10px;
+        }
+        ul li.active{
+            background-color: rgb(121, 88, 255);
+            color: white;
+        }
+
+        .searchArea{
+            background-color: #eee;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+        .searchArea div{
+            display: inline-block;
+        }
+        .ListNum{
+            margin-top: 20px;
+        }
+        .btnArea{
+            display: flex;
+            justify-content: space-between;
+        }
+        .btnArea button{
+            background-color: white;
+            
+        }
+        .btnArea button:not(:first-child){
+            background-color: rgb(90, 106, 253);
+            border: none;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="headerArea">
+            <div>
+                <span>Page 1</span>&nbsp;>&nbsp;<span>Page 2</span>&nbsp;>&nbsp;Default
+            </div>
+            <h1>Code</h1>
+        </div>
+        <div class="formArea">
+            <h3>기본정보</h3>
+            <form action="">
+                <table>
+                    <tr>
+                        <td class="user_import">
+                            <label for="">코드그룹</label>
+                            <select name="" id="">
+                                <option value="">
+                                    선택하세요
+                                </option>
+                                <option value="">1</option>
+                                <option value="">1</option>
+                                <option value="">1</option>
+                                <option value="">1</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="user_import">
+                            <label for="">코드</label>
+                            <input type="text" placeholder="자동생성" readonly >
+                        </td>
+                        <td>
+                            <label for="">코드 (ANOTHER)</label>
+                            <input type="text" placeholder="영대소문자, 숫자">
+                        </td>
+                        <td class="user_import">
+                            <label for="">코드 이름</label>
+
+                            <input type="text" placeholder="한글, 영대소문자, 숫자">
+                        </td>
+                        <td>
+                            <label for="">코드 이름 (영문)</label>
+                            <input type="text" placeholder="영대소문자, 숫자">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="user_import">
+                            <label for="">사용여부</label>
+                            <select name="" id="">
+                                <option value="">
+                                    사용
+                                </option>
+                                <option value="">사용안함</option>
+                            </select>
+                        </td>
+                        <td class="user_import">
+                            <label for="">순서</label>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">설명</label>
+                            <textarea name="" id=""></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">다국어1</label>
+                            <input type="text">
+                        </td>
+                        <td>
+                            <label for="">다국어2</label>
+                            <input type="text">
+                        </td>
+                        <td>
+                            <label for="">다국어3</label>
+                            <input type="text">
+                        </td>
+                        <td>
+                            <label for="">다국어4</label>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">다국어5</label>
+                            <input type="text">
+                        </td><td>
+                            <label for="">다국어6</label>
+                            <input type="text">
+                        </td><td>
+                            <label for="">다국어7</label>
+                            <input type="text">
+                        </td><td>
+                            <label for="">다국어8</label>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">예비1(VARCHAR TYPE)</label>
+                            <input type="text">
+                        </td>
+                        <td>
+                            <label for="">예비2(VARCHAR TYPE)</label>
+                            <input type="text">
+                        </td>
+                        <td>
+                            <label for="">예비3(VARCHAR TYPE)</label>
+                            <input type="text">
+                        </td>
+                        <td>
+                            <label for="">예비4(VARCHAR TYPE)</label>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">예비1(INT TYPE)</label>
+                            <input type="text">
+                        </td>
+                        <td>
+                            <label for="">예비2(INT TYPE)</label>
+                            <input type="text">
+                        </td>
+                        <td>
+                            <label for="">예비3(INT TYPE)</label>
+                            <input type="text">
+                        </td>
+                        <td>
+                            <label for="">예비4(INT TYPE)</label>
+                            <input type="text">
+                        </td>
+                    </tr>
+                </table>
+                <div class="btnArea">
+                    <button class="material-symbols-outlined">list</button>
+                    <button class="material-symbols-outlined">database</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
