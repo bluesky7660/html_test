@@ -9,8 +9,19 @@
         *{
             list-style: none;
             box-sizing: border-box;
+            /* border-collapse: collapse; */
+        }
+        a{
+            text-decoration: none;
+        }
+        h3{
+            border: 1px solid #aaa;
+            margin:0;
+            padding:20px;
+            border-radius: 10px 10px 0 0;
         }
         main{
+            min-width:1460px ;
             background-color: #f1f8fe;
             margin:20px;
             border: 1px solid #aaa;
@@ -18,54 +29,53 @@
         }
         main>div{
             padding:30px;
+            padding-bottom: 0;
+        }
+        main>div:not(:first-child){
+            padding-top: 0;
         }
         form{
             background-color: white;
             padding: 20px;
             border: 1px solid #aaa;
-            border-radius: 10px;
+            border-radius: 0 0 10px 10px;
+            border-top: 0;
+            
         }
         button{
             border-radius: 5px;
             padding:10px;
         }
-        input[type="text"],select{
-            width: 200px;
+        input[type="text"],select,textarea{
+            display: inline-block;
+            width: -webkit-fill-available;
             height:30px ;
-            margin:5px;
+            margin:20px 10px;
+            border: 1px solid #aaa;
+            border-radius: 3px;
+        }
+        input[readonly]{
+            background-color: #eee;
+        }
+        textarea{
+            height:90px ;
+        }
+        label{
+            text-indent: 30px;
+            display: inline-block;
+            width: 100%;
         }
         table{
             width: 100%;
-        }
-        ul{
-            display: flex;
-            justify-content: center;
-        }
-        ul li{
-            width: 42px;
-            height: 42px;
-            border-radius: 5px;
-            text-align: center;
-            padding: 10px;
-        }
-        ul li.active{
-            background-color: rgb(121, 88, 255);
-            color: white;
+            border-collapse: collapse;
         }
 
-        .searchArea{
-            background-color: #eee;
-            border-top-right-radius: 10px;
-            border-top-left-radius: 10px;
-        }
-        .searchArea div{
-            display: inline-block;
-        }
-        .ListNum{
-            margin-top: 20px;
+        .headerArea div span{
+            color:rgb(90, 106, 253);
         }
         .btnArea{
             display: flex;
+            padding: 0 10px;
             justify-content: space-between;
         }
         .btnArea button{
@@ -76,6 +86,10 @@
             background-color: rgb(90, 106, 253);
             border: none;
             color:white;
+        }
+        .user_import label::after{
+            content:"*" ;
+            color: red;
         }
     </style>
 </head>
@@ -140,9 +154,9 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td colspan="2">
                             <label for="">설명</label>
-                            <textarea name="" id=""></textarea>
+                            <textarea name="" id="" ></textarea>
                         </td>
                     </tr>
                     <tr>
@@ -216,7 +230,7 @@
                     </tr>
                 </table>
                 <div class="btnArea">
-                    <button class="material-symbols-outlined">list</button>
+                    <button class="material-symbols-outlined"><a href="./list.html">list</a></button>
                     <button class="material-symbols-outlined">database</button>
                 </div>
             </form>

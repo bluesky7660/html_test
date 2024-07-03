@@ -9,8 +9,10 @@
         *{
             list-style: none;
             box-sizing: border-box;
+            /* border-collapse: collapse; */
         }
         main{
+            min-width:1460px ;
             margin:20px;
             border: 1px solid #aaa;
             border-radius: 10px;
@@ -29,6 +31,10 @@
         }
         table{
             width: 100%;
+            border-collapse: collapse;
+        }
+        tbody tr:first-child{
+            background-color: red;
         }
         th{
             border-top: 1px solid #ddd;
@@ -66,12 +72,20 @@
         }
 
         .searchArea{
-            background-color: #eee;
+            background-color: #f1f8fe;
+            border-bottom: 1px solid #aaa;
             border-top-right-radius: 10px;
             border-top-left-radius: 10px;
         }
         .searchArea div{
             display: inline-block;
+        }
+        .searchArea div span{
+            color:rgb(90, 106, 253);
+        }
+        .tableArea>div:first-child{
+            display: flex;
+            justify-content: space-between;
         }
         .ListNum{
             margin-top: 20px;
@@ -236,7 +250,7 @@
                 </div>
                 <div>
                     <button class="material-symbols-outlined">scan_delete</button>
-                    <button class="material-symbols-outlined">add</button>
+                    <button class="material-symbols-outlined"><a href="./form.html">add</a></button>
                 </div>
             </div>
         </div>
