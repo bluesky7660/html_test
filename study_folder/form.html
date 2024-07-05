@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+      *{
+        list-style: none;
+        white-space: nowrap;
+      }
+      .material-symbols-outlined{
+        vertical-align: top;
+      }
+      main{
+
+      }
+      
+      
+      .side_menu{
+        position: relative;
+      }
+      .home li{
+        margin-bottom: 8px;
+      }
+      .side_menu h6{
+        color: #777;
+      }
+      .side_menu>div>div{
+        margin-bottom: 30px;
+        
+      }
+      .side_menu ul:not(.home ul){
+        padding-left: 0;
+      }
+      .side_menu li>*:not(p,.home span){
+        padding-left:2rem;
+      }
+      .side_menu li>div{
+        display: none;
+      }
+      .side_menu li span::before,.home p span::before{
+        content: "\e5df";
+        font-family: 'Material Symbols Outlined';
+        vertical-align: top;
+      }
+      .side_menu .back_side{
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 0;
+      }
+
+
+     /*컨텐츠*/
+        .contentArea{
+            width: 100%;
+        }
+
+      /* .table td,.table th{
+        padding-top:15px;
+        padding-bottom: 15px;
+      }
+      .table th:not(:nth-child(2)) span::after{
+        content: "\e5d7";
+        font-family: 'Material Symbols Outlined';
+        vertical-align: top;
+      }
+      tr td:nth-child(6){
+            color: rgb(90, 106, 253);
+            font-weight: bold;
+      } */
+
+
+
+
+      /* .col>div{
+        border: 1px solid #aaa;
+      } */
+      .col>div>*{
+        display: block;
+      }
+    </style>
+  </head>
+<body>
+    <main class="container-fluid d-flex">
+      <!-- <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasSide">test</button>
+      <div class="p-5 pt-3 pb-3 offcanvas offcanvas-start" tabindex="-1" id="offcanvasSide"> -->
+      <div class="side_menu pt-3 pb-3">
+        <div class="">
+          <div class="home ps-4 pe-5">
+              <p><span></span>Home</p>
+              <ul>
+                <li>E commerce</li>
+                <li>Project management</li>
+                <li>CRM <span class="badge text-bg-primary">New</span></li>
+                <li>social feed</li>
+              </ul>
+          </div>
+          <div class="side_app ps-4 pe-5">
+            <h6 class="text-uppercase">apps</h6>
+            <ul>
+              <li>
+                <p><span></span>E commerce</p>
+                <div>
+                  <p>Project management</p>
+                  <p>CRM <span class="badge text-bg-primary">New</span></p>
+                  <p>social feed</p>
+                  <p>Chat</p>
+                </div>
+              </li>
+              <li>
+                <p><span></span>CRM</p>
+                <div>
+                  <p>E commerce</p>
+                  <p>Project management</p>
+                  <p>Chat</p>
+                  <p>Email</p>
+                </div>
+              </li>
+              <li>
+                <p><span></span>Project management</p>
+                <div>
+                  <p>E commerce</p>
+                  <p>CRM <span class="badge text-bg-primary">New</span></p>
+                  <p>Chat</p>
+                  <p>Email</p>
+                </div>
+              </li>
+              <li>
+                <p><span></span>Chat</p>
+              </li>
+              <li>
+                <p><span></span>Email</p>
+                <div>
+                  <p>E commerce</p>
+                  <p>CRM <span class="badge text-bg-primary">New</span></p>
+                  <p>Project management</p>
+                  <p>Chat</p>
+                </div>
+              </li>
+              <li>
+                <p><span></span>Events</p>
+                <div>
+                  <p>E commerce</p>
+                  <p>CRM <span class="badge text-bg-primary">New</span></p>
+                  <p>Project management</p>
+                  <p>Chat</p>
+                </div>
+              </li>
+              <li>
+                <p><span></span>Kanban</p>
+                <div>
+                  <p>E commerce</p>
+                  <p>CRM <span class="badge text-bg-primary">New</span></p>
+                  <p>Project management</p>
+                  <p>Chat</p>
+                </div>
+              </li>
+              <li>
+                <p><span></span>Social</p>
+                <div>
+                  <p>E commerce</p>
+                  <p>CRM <span class="badge text-bg-primary">New</span></p>
+                  <p>Project management</p>
+                  <p>Chat</p>
+                </div>
+              </li>
+              <li>
+                <p><span></span>Calender</p>
+              </li>
+            </ul>
+          </div>
+          <div class="pages ps-4 pe-5">
+            <h6 class="text-uppercase">pages</h6>
+            <ul>
+              <li>
+                <p><span></span>Starter</p>
+                <div>
+                  <p>Project management</p>
+                  <p>CRM <span class="badge text-bg-primary">New</span></p>
+                  <p>social feed</p>
+                  <p>Chat</p>
+                </div>
+              </li><li>
+                <p><span></span>Ender</p>
+                <div>
+                  <p>Project management</p>
+                  <p>CRM <span class="badge text-bg-primary">New</span></p>
+                  <p>social feed</p>
+                  <p>Chat</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="back_side border-top p-3 ps-4 pe-5">
+            <div>
+              <p><span class="material-symbols-outlined">keyboard_tab_rtl</span>&nbsp;&nbsp; Collapsed View</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contentArea border">
+        <div class="contentBox ">
+          <div class=" p-5 pb-4 bg-light border-bottom">
+              <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Page 1</a></li>
+                  <li class="breadcrumb-item"><a href="#">Page 2</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Default</li>
+                  </ol>
+              </nav>
+              <h1>Code</h1>
+          </div>
+          <div>
+            <div>
+                <form class=" align-items-center ">
+                    <!-- <div class="row ">
+                      <div class="col-2">
+                        <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                        <select class="form-select" id="inlineFormSelectPref">
+                          <option selected>Choose...</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                      <div class="col-2">
+                        <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                        <select class="form-select" id="inlineFormSelectPref">
+                          <option selected>Choose...</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                      <div class="col-2">
+                        <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                        <select class="form-select" id="inlineFormSelectPref">
+                          <option selected>Choose...</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                      <div class="col-2">
+                        <label class="visually-hidden" for="specificSizeInputName1">Preference</label>
+                        <input type="text" class="form-control" id="specificSizeInputName1" placeholder="Jane Doe">
+                      </div>
+                      <div class="col-2">
+                        <label class="visually-hidden" for="specificSizeInputName2">Preference</label>
+                        <input type="text" class="form-control" id="specificSizeInputName2" placeholder="Jane Doe">
+                      </div>
+                    </div>
+                    <div class="row gy-2 row-cols-auto">
+                      <div class="col-2">
+                        <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                        <select class="form-select" id="inlineFormSelectPref">
+                          <option selected>Choose...</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                      <div class="col-2">
+                          <label class="visually-hidden" for="specificSizeInputName2">Preference</label>
+                          <input type="text" class="form-control" id="specificSizeInputName2" placeholder="Jane Doe">
+                      </div>
+                      <div class="col">
+                          <button type="submit" class="btn btn-primary material-symbols-outlined">search</button>
+                      </div>
+                      <div class="col">
+                          <button type="submit" class="btn btn-primary material-symbols-outlined">refresh</button>
+                      </div>
+                    </div> -->
+                    <div class="p-5">
+                        <div class="row ">
+                            <div class="col-3">
+                                <label for="" class="form-label">코드그룹</label>
+                                <select class="form-select" name="" id="">
+                                    <option value="">
+                                        선택하세요
+                                    </option>
+                                    <option value="">1</option>
+                                    <option value="">1</option>
+                                    <option value="">1</option>
+                                    <option value="">1</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-3">
+                                <label for="" class="form-label">코드</label>
+                                <input type="text" class="form-control" id="specificSizeInputName2" placeholder="자동생성" readonly >
+                            </div>
+                            <div class="col-3">
+                                <label for="" class="form-label">코드 (ANOTHER)</label>
+                                <input type="text" class="form-control" id="specificSizeInputName2" placeholder="영대소문자, 숫자">
+                            </div>
+                            <div class="col-3">
+                                <label for="" class="form-label">코드 이름</label>
+                                <input type="text" class="form-control" id="specificSizeInputName2" placeholder="한글, 영대소문자, 숫자">
+                            </div>
+                            <div class="col-3">
+                                <label for="" class="form-label">코드 이름 (영문)</label>
+                                <input type="text" class="form-control" id="specificSizeInputName2" placeholder="영대소문자, 숫자">
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-3">
+                                <label for="" class="form-label">사용여부</label>
+                                <select class="form-select" name="" id="">
+                                    <option value="">
+                                        사용
+                                    </option>
+                                    <option value="">사용안함</option>
+                                </select>
+                            </div>
+                            <div class="col-3">
+                                <label for="" class="form-label">순서</label>
+                                <input type="text" class="form-control" id="specificSizeInputNum6>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- <table>
+                        <tr>
+                            <td class="user_import">
+                                <label for="">코드그룹</label>
+                                <select name="" id="">
+                                    <option value="">
+                                        선택하세요
+                                    </option>
+                                    <option value="">1</option>
+                                    <option value="">1</option>
+                                    <option value="">1</option>
+                                    <option value="">1</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="user_import">
+                                <label for="" class="form-label">코드</label>
+                                <input type="text" class="form-control" id="specificSizeInputName2" placeholder="자동생성" readonly >
+                            </td>
+                            <td>
+                                <label for="" class="form-label">코드 (ANOTHER)</label>
+                                <input type="text" class="form-control" id="specificSizeInputName2" placeholder="영대소문자, 숫자">
+                            </td>
+                            <td class="user_import">
+                                <label for="" class="form-label">코드 이름</label>
+                                <input type="text" class="form-control" id="specificSizeInputName2" placeholder="한글, 영대소문자, 숫자">
+                            </td>
+                            <td>
+                                <label for="" class="form-label">코드 이름 (영문)</label>
+                                <input type="text" class="form-control" id="specificSizeInputName2" placeholder="영대소문자, 숫자">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="user_import">
+                                <label for="" class="form-label">사용여부</label>
+                                <select name="" id="">
+                                    <option value="">
+                                        사용
+                                    </option>
+                                    <option value="">사용안함</option>
+                                </select>
+                            </td>
+                            <td class="user_import">
+                                <label for="" class="form-label">순서</label>
+                                <input type="text" class="form-control" id="specificSizeInputName2">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <label for="" class="form-label">설명</label>
+                                <textarea name="" id="" ></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="" class="form-label">다국어1</label>
+                                <input type="text" class="form-control" id="specificSizeInputName2">
+                            </td>
+                            <td>
+                                <label for="" class="form-label">다국어2</label>
+                                <input type="text" class="form-control" id="specificSizeInputName2">
+                            </td>
+                            <td>
+                                <label for="" class="form-label">다국어3</label>
+                                <input type="text" class="form-control" id="specificSizeInputName2">
+                            </td>
+                            <td>
+                                <label for="" class="form-label">다국어4</label>
+                                <input type="text" class="form-control" id="specificSizeInputName2">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="" class="form-label">다국어5</label>
+                                <input type="text" class="form-control" id="specificSizeInputName2">
+                            </td><td>
+                                <label for="" class="form-label">다국어6</label>
+                                <input type="text" class="form-control" id="specificSizeInputName2">
+                            </td><td>
+                                <label for="" class="form-label">다국어7</label>
+                                <input type="text" class="form-control" id="specificSizeInputName2">
+                            </td><td>
+                                <label for="" class="form-label">다국어8</label>
+                                <input type="text" class="form-control" id="specificSizeInputName2">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="" class="form-label">예비1(VARCHAR TYPE)</label>
+                                <input type="text" class="form-control" id="specificSizeInputName2">
+                            </td>
+                            <td>
+                                <label for="" class="form-label">예비2(VARCHAR TYPE)</label>
+                                <input type="text" class="form-control" id="specificSizeInputName2">
+                            </td>
+                            <td>
+                                <label for="" class="form-label">예비3(VARCHAR TYPE)</label>
+                                <input type="text" class="form-control" id="specificSizeInputName2">
+                            </td>
+                            <td>
+                                <label for="" class="form-label">예비4(VARCHAR TYPE)</label>
+                                <input type="text" class="form-control" id="specificSizeInputName2">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="" class="form-label">예비1(INT TYPE)</label>
+                                <input type="text" class="form-control" id="specificSizeInputName2">
+                            </td>
+                            <td>
+                                <label for="" class="form-label">예비2(INT TYPE)</label>
+                                <input type="text" class="form-control" id="specificSizeInputName2">
+                            </td>
+                            <td>
+                                <label for="" class="form-label">예비3(INT TYPE)</label>
+                                <input type="text" class="form-control" id="specificSizeInputName2">
+                            </td>
+                            <td>
+                                <label for="" class="form-label">예비4(INT TYPE)</label>
+                                <input type="text" class="form-control" id="specificSizeInputName2"s>
+                            </td>
+                        </tr>
+                    </table> -->
+                </form>
+            </div>
+            <div class="m-5 mt-0 d-flex justify-content-between">
+                <div>
+                    <button class="btn btn-danger material-symbols-outlined">close</button>
+                    <button class="btn btn-danger material-symbols-outlined">delete</button>
+                </div>
+                <div>
+                    <button class="btn btn-success material-symbols-outlined">scan_delete</button>
+                    <button class="btn btn-primary material-symbols-outlined" onclick="location.href='./form.html'" >add</button>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="footer p-3 pe-5 ps-5 bg-light border-top">
+          <p>Thank you for creating with phoenix | 2023 &copy; <span class="text-primary">Themewagon</span></p>
+        </div>
+      </div>
+      
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+      // const offcanvasElementList = document.querySelectorAll('.offcanvas')
+      // const offcanvasList = [...offcanvasElementList].map(offcanvasEl => new bootstrap.Offcanvas(offcanvasEl))
+    </script>
+  </body>
+</html>
