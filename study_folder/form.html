@@ -20,7 +20,13 @@
       
       
       .side_menu{
-        position: relative;
+        position: fixed;
+        top:0;
+        bottom: 0;
+        background-color: #fff;
+        width: 260px;
+        height:100%;
+        /* border-left: 1px solid  ; */
       }
       .home li{
         margin-bottom: 8px;
@@ -28,7 +34,7 @@
       .side_menu h6{
         color: #777;
       }
-      .side_menu>div>div{
+      .side_menu>div:not(.back_side)>div{
         margin-bottom: 30px;
         
       }
@@ -51,12 +57,14 @@
         position: absolute;
         bottom: 0;
         margin-bottom: 0;
+        background-color: #fff;
       }
 
 
      /*컨텐츠*/
         .contentArea{
             width: 100%;
+            padding-left: 260px;
         }
 
       /* .table td,.table th{
@@ -82,14 +90,23 @@
       .col>div>*{
         display: block;
       }
+      .row{
+        margin-bottom: 30px;
+      }
+      .form-label{
+        margin-left: 20px;
+      }
     </style>
   </head>
 <body>
+    <header>
+      
+    </header>
     <main class="container-fluid d-flex">
       <!-- <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasSide">test</button>
-      <div class="p-5 pt-3 pb-3 offcanvas offcanvas-start" tabindex="-1" id="offcanvasSide"> -->
-      <div class="side_menu pt-3 pb-3">
-        <div class="">
+      <div class="p-5 pt-3 pb-3 offcanvas offcanvas-start" tabindex="-1" id="offcanvasSide"> -->  
+      <div class="side_menu pt-3 pb-3 border-end">
+        <div class="scrollable">
           <div class="home ps-4 pe-5">
               <p><span></span>Home</p>
               <ul>
@@ -195,14 +212,14 @@
               </li>
             </ul>
           </div>
-          <div class="back_side border-top p-3 ps-4 pe-5">
-            <div>
-              <p><span class="material-symbols-outlined">keyboard_tab_rtl</span>&nbsp;&nbsp; Collapsed View</p>
-            </div>
+        </div>
+        <div class="back_side border-top p-3 ps-4 pe-5">
+          <div>
+            <p><span class="material-symbols-outlined">keyboard_tab_rtl</span>&nbsp;&nbsp; Collapsed View</p>
           </div>
         </div>
       </div>
-      <div class="contentArea border">
+      <div class="contentArea">
         <div class="contentBox ">
           <div class=" p-5 pb-4 bg-light border-bottom">
               <nav aria-label="breadcrumb">
@@ -324,13 +341,84 @@
                             </div>
                         </div>
                         <div class="row ">
-                            <div class="col-3">
+                            <div class="col-6">
                                 <label for="" class="form-label">설명</label>
                                 <textarea class="form-control" name="" id="" ></textarea>
                             </div>
                         </div>
-                    </div>
-                    
+                        <div class="row ">
+                          <div class="col-3">
+                              <label for="" class="form-label">다국어1</label>
+                              <input type="text" class="form-control" id="specificSizeInputName2" >
+                          </div>
+                          <div class="col-3">
+                              <label for="" class="form-label">다국어2</label>
+                              <input type="text" class="form-control" id="specificSizeInputName2">
+                          </div>
+                          <div class="col-3">
+                              <label for="" class="form-label">다국어3</label>
+                              <input type="text" class="form-control" id="specificSizeInputName2">
+                          </div>
+                          <div class="col-3">
+                              <label for="" class="form-label">다국어4</label>
+                              <input type="text" class="form-control" id="specificSizeInputName2">
+                          </div>
+                        </div>
+                        <div class="row ">
+                          <div class="col-3">
+                              <label for="" class="form-label">다국어5</label>
+                              <input type="text" class="form-control" id="specificSizeInputName2" >
+                          </div>
+                          <div class="col-3">
+                              <label for="" class="form-label">다국어6</label>
+                              <input type="text" class="form-control" id="specificSizeInputName2">
+                          </div>
+                          <div class="col-3">
+                              <label for="" class="form-label">다국어7</label>
+                              <input type="text" class="form-control" id="specificSizeInputName2">
+                          </div>
+                          <div class="col-3">
+                              <label for="" class="form-label">다국어8</label>
+                              <input type="text" class="form-control" id="specificSizeInputName2">
+                          </div>
+                        </div>
+                        <div class="row ">
+                          <div class="col-3">
+                              <label for="" class="form-label">예비1(VARCHAR TYPE)</label>
+                              <input type="text" class="form-control" id="specificSizeInputName2" >
+                          </div>
+                          <div class="col-3">
+                              <label for="" class="form-label">예비2(VARCHAR TYPE)</label>
+                              <input type="text" class="form-control" id="specificSizeInputName2">
+                          </div>
+                          <div class="col-3">
+                              <label for="" class="form-label">예비3(VARCHAR TYPE)</label>
+                              <input type="text" class="form-control" id="specificSizeInputName2">
+                          </div>
+                          <div class="col-3">
+                              <label for="" class="form-label">예비4(VARCHAR TYPE)</label>
+                              <input type="text" class="form-control" id="specificSizeInputName2">
+                          </div>
+                        </div>
+                        <div class="row ">
+                          <div class="col-3">
+                              <label for="" class="form-label">예비1(INT TYPE)</label>
+                              <input type="text" class="form-control" id="specificSizeInputName2" >
+                          </div>
+                          <div class="col-3">
+                              <label for="" class="form-label">예비2(INT TYPE)</label>
+                              <input type="text" class="form-control" id="specificSizeInputName2">
+                          </div>
+                          <div class="col-3">
+                              <label for="" class="form-label">예비3(INT TYPE)</label>
+                              <input type="text" class="form-control" id="specificSizeInputName2">
+                          </div>
+                          <div class="col-3">
+                              <label for="" class="form-label">예비4(INT TYPE)</label>
+                              <input type="text" class="form-control" id="specificSizeInputName2">
+                          </div>
+                        </div>
+                    </div>  
                     <!-- <table>
                         <tr>
                             <td class="user_import">
@@ -459,12 +547,10 @@
             </div>
             <div class="m-5 mt-0 d-flex justify-content-between">
                 <div>
-                    <button class="btn btn-danger material-symbols-outlined">close</button>
-                    <button class="btn btn-danger material-symbols-outlined">delete</button>
+                    <button class="btn btn-danger material-symbols-outlined" onclick="location.href='./index.html'">list</button>
                 </div>
                 <div>
-                    <button class="btn btn-success material-symbols-outlined">scan_delete</button>
-                    <button class="btn btn-primary material-symbols-outlined" onclick="location.href='./form.html'" >add</button>
+                    <button class="btn btn-primary material-symbols-outlined">database</button>
                 </div>
             </div>
           </div>
