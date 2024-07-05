@@ -11,21 +11,35 @@
         list-style: none;
         white-space: nowrap;
       }
+      a{
+        text-decoration: none;
+      }
       .material-symbols-outlined{
         vertical-align: top;
       }
-      main{
+      header{
+        position: fixed;
+        /* height: 6px; */
+        right: 0;
+        left: 0;
+        background-color: #fff;
+        z-index: 1;
+      }
+      nav ul{
 
+      }
+      main.container-fluid{
+        padding: 0;
       }
       
       
       .side_menu{
         position: fixed;
-        top:0;
+        top:61.8px;
         bottom: 0;
         background-color: #fff;
         width: 260px;
-        height:100%;
+        /* height:100%; */
         /* border-left: 1px solid  ; */
       }
       .home li{
@@ -65,6 +79,7 @@
         .contentArea{
             width: 100%;
             padding-left: 260px;
+            padding-top: 56px;
         }
 
       /* .table td,.table th{
@@ -99,22 +114,42 @@
     </style>
   </head>
 <body>
-    <header>
-      
+    <header class="fixed-top">
+      <nav class="navbar navbar-expand-lg border-bottom   ">
+        <div class="container-fluid ps-4 pe-4">
+          <a class="navbar-brand" href="#">Adsrun</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="button">Search</button>
+          </form>
+          <div>
+            <button class="btn bg-warning rounded-circle" style="width: 38px;height: 38px;line-height: 38px;padding: 6.4px;"><span class="material-symbols-outlined">sunny</span></button>
+            <button class="btn"><span class="material-symbols-outlined">notifications</span></button>
+            <button class="btn"><span class="material-symbols-outlined">apps</span></button>
+            <button class="btn"><span class="material-symbols-outlined">account_circle</span></button>
+          </div>
+        </div>
+      </nav>
     </header>
     <main class="container-fluid d-flex">
       <!-- <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasSide">test</button>
       <div class="p-5 pt-3 pb-3 offcanvas offcanvas-start" tabindex="-1" id="offcanvasSide"> -->  
-      <div class="side_menu pt-3 pb-3 border-end">
-        <div class="scrollable">
-          <div class="home ps-4 pe-5">
-              <p><span></span>Home</p>
-              <ul>
-                <li>E commerce</li>
-                <li>Project management</li>
-                <li>CRM <span class="badge text-bg-primary">New</span></li>
-                <li>social feed</li>
-              </ul>
+      <div class="side_menu pt-3 pb-3 border-end accordion">
+        <div class="scrollable ">
+          <div class="accordion-item home ps-4 pe-5">
+              <div class="accordion-header"><p class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><span></span>Home</p></div>
+              
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <ul class="accordion-body">
+                  <li>E commerce</li>
+                  <li>Project management</li>
+                  <li>CRM <span class="badge text-bg-primary">New</span></li>
+                  <li>social feed</li>
+                </ul>
+              </div>
           </div>
           <div class="side_app ps-4 pe-5">
             <h6 class="text-uppercase">apps</h6>
@@ -219,9 +254,9 @@
           </div>
         </div>
       </div>
-      <div class="contentArea">
+      <div class="contentArea bg-light">
         <div class="contentBox ">
-          <div class=" p-5 pb-4 bg-light border-bottom">
+          <div class=" p-5 pb-4 bg-light">
               <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="#">Page 1</a></li>
@@ -231,9 +266,10 @@
               </nav>
               <h1>Code</h1>
           </div>
-          <div>
+          <div class="m-5 mt-0 bg-white border rounded-4">
             <div>
-                <form class=" align-items-center ">
+                <h3 class="p-4 bg-light rounded-top-4 mb-0">기본정보</h3>
+                <form class=" align-items-center border-top">
                     <!-- <div class="row ">
                       <div class="col-2">
                         <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
@@ -292,7 +328,7 @@
                           <button type="submit" class="btn btn-primary material-symbols-outlined">refresh</button>
                       </div>
                     </div> -->
-                    <div class="p-5">
+                    <div class="p-4">
                         <div class="row ">
                             <div class="col-3">
                                 <label for="" class="form-label">코드그룹</label>
@@ -545,7 +581,7 @@
                     </table> -->
                 </form>
             </div>
-            <div class="m-5 mt-0 d-flex justify-content-between">
+            <div class="m-5 mt-0  d-flex justify-content-between">
                 <div>
                     <button class="btn btn-danger material-symbols-outlined" onclick="location.href='./index.html'">list</button>
                 </div>
