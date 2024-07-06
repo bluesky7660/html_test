@@ -11,29 +11,55 @@
         list-style: none;
         white-space: nowrap;
       }
+      a{
+        text-decoration: none;
+      }
       .material-symbols-outlined{
         vertical-align: top;
       }
-      main{
-
+      header{
+        position: fixed;
+        /* height: 6px; */
+        right: 0;
+        left: 0;
+        background-color: #fff;
+        z-index: 1;
+      }
+      .accordion ul{
+        padding-left: 0;
+      }
+      main.container-fluid{
+        padding: 0;
       }
       
       
       .side_menu{
-        position: relative;
+        position: fixed;
+        top:56.8px;
+        bottom: 0;
+        background-color: #fff;
+        width: 260px;
+        /* height:100%; */
+        /* border-left: 1px solid  ; */
       }
       .home li{
         margin-bottom: 8px;
       }
       .side_menu h6{
         color: #777;
+        margin-bottom: 1rem;
       }
-      .side_menu>div>div{
-        margin-bottom: 30px;
+      .side_menu>div:not(.back_side)>div{
+        /* margin-bottom: 30px; */
         
       }
-      .side_menu ul:not(.home ul){
-        padding-left: 0;
+      .accordion-button{
+        margin-bottom: 0;
+      }
+      .side_menu ul.accordion-body{
+        padding-left: 3rem;
+        padding-top: 0;
+        margin-bottom: 0;
       }
       .side_menu li>*:not(p,.home span){
         padding-left:2rem;
@@ -51,10 +77,15 @@
         position: absolute;
         bottom: 0;
         margin-bottom: 0;
+        background-color: #fff;
       }
 
-
      /*컨텐츠*/
+      .contentArea{
+            width: 100%;
+            padding-left: 260px;
+            padding-top: 56px;
+      }
 
       table{
         text-align: center;
@@ -76,10 +107,30 @@
     </style>
   </head>
 <body>
+    <header class="fixed-top">
+      <nav class="navbar navbar-expand-lg border-bottom   ">
+        <div class="container-fluid ps-4 pe-4">
+          <a class="navbar-brand" href="#">Adsrun</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="button">Search</button>
+          </form>
+          <div>
+            <button class="btn bg-warning rounded-circle" style="width: 38px;height: 38px;line-height: 38px;padding: 6.4px;"><span class="material-symbols-outlined">sunny</span></button>
+            <button class="btn"><span class="material-symbols-outlined">notifications</span></button>
+            <button class="btn"><span class="material-symbols-outlined">apps</span></button>
+            <button class="btn"><span class="material-symbols-outlined">account_circle</span></button>
+          </div>
+        </div>
+      </nav>
+    </header>
     <main class="container-fluid d-flex">
       <!-- <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasSide">test</button>
       <div class="p-5 pt-3 pb-3 offcanvas offcanvas-start" tabindex="-1" id="offcanvasSide"> -->
-      <div class="side_menu pt-3 pb-3">
+      <div class="side_menu pt-3 pb-3 border-end">
         <div class="">
           <div class="home ps-4 pe-5">
               <p><span></span>Home</p>
@@ -193,9 +244,9 @@
           </div>
         </div>
       </div>
-      <div class="contentAreas">
-        <div class="contentBox ">
-          <div class=" p-5 pb-4 bg-light ">
+      <div class="contentArea bg-light">
+        <div class="contentBox  pb-5">
+          <div class=" p-5 pb-4">
               <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="#">Page 1</a></li>
@@ -206,65 +257,64 @@
               <h1>Code</h1>
               <form class="row mt-4 gx-3 align-items-center">
                   <div class="row ">
-                    <div class="col-2">
+                    <div class="col">
                       <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
-                      <select class="form-select" id="inlineFormSelectPref">
+                      <select class="form-select" id="inlineFormSelectPref1">
                         <option value="N" selected>N</option>
                         <option value="Y">Y</option>
                       </select>
                     </div>
-                    <div class="col-2">
+                    <div class="col">
                       <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
-                      <select class="form-select" id="inlineFormSelectPref">
-                        <option selected>Choose...</option>
+                      <select class="form-select" id="inlineFormSelectPref2">
+                        <option value="Y" selected>Y</option>
+                        <option value="N">N</option>
+                      </select>
+                    </div>
+                    <div class="col">
+                      <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                      <select class="form-select" id="inlineFormSelectPref3">
+                        <option selected>수정일</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
                       </select>
                     </div>
-                    <div class="col-2">
-                      <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
-                      <select class="form-select" id="inlineFormSelectPref">
-                        <option selected>Choose...</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
-                    </div>
-                    <div class="col-2">
+                    <div class="col">
                       <label class="visually-hidden" for="specificSizeInputName1">Preference</label>
-                      <input type="text" class="form-control" id="specificSizeInputName1" placeholder="Jane Doe">
+                      <input type="text" class="form-control" id="specificSizeInputName1" placeholder="" value="2024-06-05">
                     </div>
-                    <div class="col-2">
+                    <div class="col">
                       <label class="visually-hidden" for="specificSizeInputName2">Preference</label>
-                      <input type="text" class="form-control" id="specificSizeInputName2" placeholder="Jane Doe">
+                      <input type="text" class="form-control" id="specificSizeInputName2" placeholder="" value="2024-07-05">
                     </div>
                   </div>
-                  <div class="row gy-2 row-cols-auto">
-                    <div class="col-2">
+                  <div class="row gy-2">
+                    <div class="col">
                       <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
-                      <select class="form-select" id="inlineFormSelectPref">
-                        <option selected>Choose...</option>
+                      <select class="form-select" id="inlineFormSelectPref4">
+                        <option selected>검색구분</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
                       </select>
                     </div>
-                    <div class="col-2">
+                    <div class="col">
                         <label class="visually-hidden" for="specificSizeInputName2">Preference</label>
-                        <input type="text" class="form-control" id="specificSizeInputName2" placeholder="Jane Doe">
+                        <input type="text" class="form-control" id="specificSizeInputName2" placeholder="검색어">
                     </div>
                     <div class="col">
                         <button type="submit" class="btn btn-primary material-symbols-outlined">search</button>
-                    </div>
-                    <div class="col">
                         <button type="submit" class="btn btn-primary material-symbols-outlined">refresh</button>
                     </div>
+                    <div class="col">      
+                    </div>
+                    <div class="col">
+                    </div>
                   </div>
-                  
               </form>
           </div>
-          <div class="ps-5 pe-5 border-top">
+          <div class="ps-5 pe-5 border-top border-bottom bg-white">
             <div class="d-flex justify-content-between m-3">
               <h5>Tatal: 171</h5>
               <select class="col-2" name="" id="">
@@ -376,17 +426,18 @@
                 </ul>
               </nav>
             </div>
-          </div>
-          <div class="m-5 mt-0 d-flex justify-content-between">
-            <div>
-                <button class="btn btn-danger material-symbols-outlined">close</button>
-                <button class="btn btn-danger material-symbols-outlined">delete</button>
+            <div class="p-5 pb-5 pt-0 d-flex justify-content-between">
+              <div>
+                  <button class="btn btn-danger material-symbols-outlined">close</button>
+                  <button class="btn btn-danger material-symbols-outlined">delete</button>
+              </div>
+              <div>
+                  <button class="btn btn-success material-symbols-outlined">scan_delete</button>
+                  <button class="btn btn-primary material-symbols-outlined" onclick="location.href='./form.html'" >add</button>
+              </div>
             </div>
-            <div>
-                <button class="btn btn-success material-symbols-outlined">scan_delete</button>
-                <button class="btn btn-primary material-symbols-outlined" onclick="location.href='./form.html'" >add</button>
-            </div>
           </div>
+          
         </div>
         <div class="footer p-3 pe-5 ps-5 bg-light border-top">
           <p>Thank you for creating with phoenix | 2023 &copy; <span class="text-primary">Themewagon</span></p>
