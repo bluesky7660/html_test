@@ -80,6 +80,7 @@
         bottom: 0;
         margin-bottom: 0;
         background-color: #fff;
+        z-index: 2;
       }
 
 
@@ -226,44 +227,45 @@
             </div>
           </div>
           <div class="accordion-item">
-            <div class="accordion-header"><p class="pt-2 pb-2" type="button" style="padding: 1.25rem;"><span></span>Chat</p></div>
+            <div class="accordion-header"><p class="accordion-button pt-2 pb-2 collapsed" type="button" style="padding: 1.25rem;"><span></span>Chat</p></div>
           </div>
-          
-          <ul class="accordion-item side_app ps-4 pe-5">  
-            <li>
-              <p><span></span>Events</p>
-              <ul>
+          <div class="accordion-item side_app">
+            <div class="accordion-header"><p class="accordion-button pt-2 pb-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_6" aria-expanded="true" aria-controls="collapse_6"><span></span>Events</p></div>
+            <div id="collapse_6" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <ul class="accordion-body">
                 <li>E commerce</li>
                 <li>CRM <span class="badge text-bg-primary">New</span></li>
                 <li>project management</li>
                 <li>Chat</li>
               </ul>
-            </li>
-            <li>
-              <p><span></span>Kanban</p>
-              <ul>
-                <li>E commerce</li>
-                <li>CRM <span class="badge text-bg-primary">New</span></li>
-                <li>project management</li>
-                <li>Chat</li>
-              </ul>
-            </li>
-            <li>
-              <p><span></span>Social</p>
-              <ul>
-                <li>E commerce</li>
-                <li>CRM <span class="badge text-bg-primary">New</span></li>
-                <li>project management</li>
-                <li>Chat</li>
-              </ul>
-            </li>
-            <li>
-              <p><span></span>Calender</p>
-            </li>
-          </ul>
-          <div >
-            
+            </div>
           </div>
+          <div class="accordion-item side_app">
+            <div class="accordion-header"><p class="accordion-button pt-2 pb-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_7" aria-expanded="true" aria-controls="collapse_7"><span></span>Kanban</p></div>
+            <div id="collapse_7" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <ul class="accordion-body">
+                <li>E commerce</li>
+                <li>CRM <span class="badge text-bg-primary">New</span></li>
+                <li>project management</li>
+                <li>Chat</li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordion-item side_app">
+            <div class="accordion-header"><p class="accordion-button pt-2 pb-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_8" aria-expanded="true" aria-controls="collapse_8"><span></span>Social</p></div>
+            <div id="collapse_8" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <ul class="accordion-body">
+                <li>E commerce</li>
+                <li>CRM <span class="badge text-bg-primary">New</span></li>
+                <li>project management</li>
+                <li>Chat</li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header"><p class="accordion-button pt-2 pb-2 collapsed" type="button" style="padding: 1.25rem;"><span></span>Calender</p></div>
+          </div>
+
           <div class="pages ps-4 pe-5">
             <h6 class="text-uppercase">pages</h6>
             <ul>
