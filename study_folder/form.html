@@ -65,6 +65,10 @@
         padding-top: 0;
         margin-bottom: 0;
       }
+
+      .side_menu li{
+        cursor: pointer;
+      }
       .side_menu li>*:not(p,span){
         padding-left:2rem;
       }
@@ -84,6 +88,9 @@
         margin-bottom: 0;
         background-color: #fff;
         z-index: 2;
+      }
+      .side_menu .back_side span::before{
+        display: none;
       }
 
 
@@ -301,7 +308,7 @@
         </div>
         <div class="back_side border-top p-3 ps-4 pe-5">
           <div>
-            <p><span class="material-symbols-outlined">keyboard_tab_rtl</span>&nbsp;&nbsp; Collapsed View</p>
+            <p type="button" style=" padding-left: 1.25rem;"><span class="material-symbols-outlined">keyboard_tab_rtl</span>&nbsp;&nbsp; Collapsed View</p>
           </div>
         </div>
       </div>
