@@ -35,7 +35,7 @@
       .accordion ul{
         padding-left: 0;
       }
-      main.container-fluid{
+      main{
         padding: 0;
       }
       
@@ -120,6 +120,12 @@
 
 
 
+      /**/
+      .container-fluid,header{
+        min-width: 1300px;
+      }
+
+
 
       /* .col>div{
         border: 1px solid #aaa;
@@ -165,29 +171,30 @@
     </style>
   </head>
 <body>
+  <div class="container-fluid">
     <header class="fixed-top">
       <nav class="navbar navbar-expand-lg border-bottom   ">
-        <div class="container-fluid ps-4 pe-4">
+        <div class="d-flex justify-content-between gx-4 ms-auto me-auto w-100 align-items-center ps-4 pe-4">
           <a class="navbar-brand" href="#">Adsrun</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="button">Search</button>
-          </form>
-          <div>
-            <button class="btn bg-warning rounded-circle" style="width: 38px;height: 38px;line-height: 38px;padding: 6.4px;"><span class="material-symbols-outlined">sunny</span></button>
-            <button class="btn"><span class="material-symbols-outlined">notifications</span></button>
-            <button class="btn"><span class="material-symbols-outlined">apps</span></button>
-            <button class="btn"><span class="material-symbols-outlined">account_circle</span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="button">Search</button>
+            </form>
+            <div>
+              <button class="btn bg-warning rounded-circle" style="width: 38px;height: 38px;line-height: 38px;padding: 6.4px;"><span class="material-symbols-outlined">sunny</span></button>
+              <button class="btn"><span class="material-symbols-outlined">notifications</span></button>
+              <button class="btn"><span class="material-symbols-outlined">apps</span></button>
+              <button class="btn"><span class="material-symbols-outlined">account_circle</span></button>
+            </div>
           </div>
         </div>
       </nav>
     </header>
-    <main class="container-fluid d-flex">
-      <!-- <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasSide">test</button>
-      <div class="p-5 pt-3 pb-3 offcanvas offcanvas-start" tabindex="-1" id="offcanvasSide"> -->  
+    <main class="d-flex">
       <div class="side_menu ps-3 border-end accordion" id="accordionExample">
         <div class="scrollable ">
           <div class="accordion-item home" >
@@ -330,66 +337,8 @@
           <div class="m-5 mt-0 bg-white border rounded-4">
             <div>
                 <h3 class="p-4 bg-light rounded-top-4 mb-0">기본정보</h3>
-                <form class=" align-items-center border-top">
-                    <!-- <div class="row ">
-                      <div class="col-2">
-                        <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
-                        <select class="form-select" id="inlineFormSelectPref">
-                          <option selected>Choose...</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                        </select>
-                      </div>
-                      <div class="col-2">
-                        <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
-                        <select class="form-select" id="inlineFormSelectPref">
-                          <option selected>Choose...</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                        </select>
-                      </div>
-                      <div class="col-2">
-                        <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
-                        <select class="form-select" id="inlineFormSelectPref">
-                          <option selected>Choose...</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                        </select>
-                      </div>
-                      <div class="col-2">
-                        <label class="visually-hidden" for="specificSizeInputName1">Preference</label>
-                        <input type="text" class="form-control" id="specificSizeInputName1" placeholder="Jane Doe">
-                      </div>
-                      <div class="col-2">
-                        <label class="visually-hidden" for="specificSizeInputName2">Preference</label>
-                        <input type="text" class="form-control" id="specificSizeInputName2" placeholder="Jane Doe">
-                      </div>
-                    </div>
-                    <div class="row gy-2 row-cols-auto">
-                      <div class="col-2">
-                        <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
-                        <select class="form-select" id="inlineFormSelectPref">
-                          <option selected>Choose...</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                        </select>
-                      </div>
-                      <div class="col-2">
-                          <label class="visually-hidden" for="specificSizeInputName2">Preference</label>
-                          <input type="text" class="form-control" id="specificSizeInputName2" placeholder="Jane Doe">
-                      </div>
-                      <div class="col">
-                          <button type="submit" class="btn btn-primary material-symbols-outlined">search</button>
-                      </div>
-                      <div class="col">
-                          <button type="submit" class="btn btn-primary material-symbols-outlined">refresh</button>
-                      </div>
-                    </div> -->
-                    <div class="p-4">
+                <form class="p-4 align-items-center border-top">
+                    <div class="">
                         <div class="row ">
                             <div class="col-3">
                                 <label for="" class="form-label">코드그룹</label>
@@ -516,130 +465,6 @@
                           </div>
                         </div>
                     </div>  
-                    <!-- <table>
-                        <tr>
-                            <td class="user_import">
-                                <label for="">코드그룹</label>
-                                <select name="" id="">
-                                    <option value="">
-                                        선택하세요
-                                    </option>
-                                    <option value="">1</option>
-                                    <option value="">1</option>
-                                    <option value="">1</option>
-                                    <option value="">1</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="user_import">
-                                <label for="" class="form-label">코드</label>
-                                <input type="text" class="form-control" id="specificSizeInputName2" placeholder="자동생성" readonly >
-                            </td>
-                            <td>
-                                <label for="" class="form-label">코드 (ANOTHER)</label>
-                                <input type="text" class="form-control" id="specificSizeInputName2" placeholder="영대소문자, 숫자">
-                            </td>
-                            <td class="user_import">
-                                <label for="" class="form-label">코드 이름</label>
-                                <input type="text" class="form-control" id="specificSizeInputName2" placeholder="한글, 영대소문자, 숫자">
-                            </td>
-                            <td>
-                                <label for="" class="form-label">코드 이름 (영문)</label>
-                                <input type="text" class="form-control" id="specificSizeInputName2" placeholder="영대소문자, 숫자">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="user_import">
-                                <label for="" class="form-label">사용여부</label>
-                                <select name="" id="">
-                                    <option value="">
-                                        사용
-                                    </option>
-                                    <option value="">사용안함</option>
-                                </select>
-                            </td>
-                            <td class="user_import">
-                                <label for="" class="form-label">순서</label>
-                                <input type="text" class="form-control" id="specificSizeInputName2">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <label for="" class="form-label">설명</label>
-                                <textarea name="" id="" ></textarea>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label for="" class="form-label">다국어1</label>
-                                <input type="text" class="form-control" id="specificSizeInputName2">
-                            </td>
-                            <td>
-                                <label for="" class="form-label">다국어2</label>
-                                <input type="text" class="form-control" id="specificSizeInputName2">
-                            </td>
-                            <td>
-                                <label for="" class="form-label">다국어3</label>
-                                <input type="text" class="form-control" id="specificSizeInputName2">
-                            </td>
-                            <td>
-                                <label for="" class="form-label">다국어4</label>
-                                <input type="text" class="form-control" id="specificSizeInputName2">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label for="" class="form-label">다국어5</label>
-                                <input type="text" class="form-control" id="specificSizeInputName2">
-                            </td><td>
-                                <label for="" class="form-label">다국어6</label>
-                                <input type="text" class="form-control" id="specificSizeInputName2">
-                            </td><td>
-                                <label for="" class="form-label">다국어7</label>
-                                <input type="text" class="form-control" id="specificSizeInputName2">
-                            </td><td>
-                                <label for="" class="form-label">다국어8</label>
-                                <input type="text" class="form-control" id="specificSizeInputName2">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label for="" class="form-label">예비1(VARCHAR TYPE)</label>
-                                <input type="text" class="form-control" id="specificSizeInputName2">
-                            </td>
-                            <td>
-                                <label for="" class="form-label">예비2(VARCHAR TYPE)</label>
-                                <input type="text" class="form-control" id="specificSizeInputName2">
-                            </td>
-                            <td>
-                                <label for="" class="form-label">예비3(VARCHAR TYPE)</label>
-                                <input type="text" class="form-control" id="specificSizeInputName2">
-                            </td>
-                            <td>
-                                <label for="" class="form-label">예비4(VARCHAR TYPE)</label>
-                                <input type="text" class="form-control" id="specificSizeInputName2">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label for="" class="form-label">예비1(INT TYPE)</label>
-                                <input type="text" class="form-control" id="specificSizeInputName2">
-                            </td>
-                            <td>
-                                <label for="" class="form-label">예비2(INT TYPE)</label>
-                                <input type="text" class="form-control" id="specificSizeInputName2">
-                            </td>
-                            <td>
-                                <label for="" class="form-label">예비3(INT TYPE)</label>
-                                <input type="text" class="form-control" id="specificSizeInputName2">
-                            </td>
-                            <td>
-                                <label for="" class="form-label">예비4(INT TYPE)</label>
-                                <input type="text" class="form-control" id="specificSizeInputName2"s>
-                            </td>
-                        </tr>
-                    </table> -->
                 </form>
             </div>
             <div class="m-5 mt-0  d-flex justify-content-between">
@@ -656,13 +481,12 @@
           <p>Thank you for creating with phoenix | 2023 &copy; <span class="text-primary">Themewagon</span></p>
         </div>
       </div>
-      
-    </main>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script>
-      // const offcanvasElementList = document.querySelectorAll('.offcanvas')
-      // const offcanvasList = [...offcanvasElementList].map(offcanvasEl => new bootstrap.Offcanvas(offcanvasEl))
-    </script>
-  </body>
+    </main> 
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script>
+    // const offcanvasElementList = document.querySelectorAll('.offcanvas')
+    // const offcanvasList = [...offcanvasElementList].map(offcanvasEl => new bootstrap.Offcanvas(offcanvasEl))
+  </script>
+</body>
 </html>
