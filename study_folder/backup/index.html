@@ -6,7 +6,6 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="./style.css">
     <style>
       *{
         list-style: none;
@@ -23,13 +22,12 @@
       }
       header{
         position: fixed;
+        /* height: 6px; */
         right: 0;
         left: 0;
         background-color: #fff;
         z-index: 1;
       }
-
-      /*
       .accordion ul{
         padding-left: 0;
       }
@@ -45,6 +43,8 @@
         background-color: #fff;
         width: 260px;
         z-index: 5;
+        /* height:100%; */
+        /* border-left: 1px solid  ; */
       }
       .home li{
         margin-bottom: 8px;
@@ -81,11 +81,11 @@
       }
 
      /*컨텐츠*/
-      /* .contentArea{
+      .contentArea{
             width: 100%;
             padding-left: 260px;
             padding-top: 56px;
-      } */
+      }
 
       table{
         text-align: center;
@@ -104,177 +104,143 @@
             color: rgb(90, 106, 253);
             font-weight: bold;
       }
-      /* .contentArea form input[type="text"],.contentArea form select{
-        min-width: 130px;
-        max-width: 200px;
-      } */
     </style>
   </head>
 <body>
-  <div class="container-fluid">
-    <header class="fixed-top navbar-expand-lg" >
-      <nav class="navbar navbar-expand-lg border-bottom " style="position: relative; ">
-        <div class="d-flex justify-content-between gx-4 ms-auto me-auto w-100 align-items-center ps-4 pe-4">
-          <a class="navbar-brand" href="#"><img class="me-2" src="../image/adsrun_logo.jpg" height="30px"  style="border-radius: 50%;vertical-align: top;">Adsrun</a>
-          <form class="d-flex  offcanvas-lg " role="search">
+    <header class="fixed-top">
+      <nav class="navbar navbar-expand-lg border-bottom   ">
+        <div class="container-fluid ps-4 pe-4">
+          <a class="navbar-brand" href="#">Adsrun</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="button">Search</button>
           </form>
-          <div class=" offcanvas-lg">
+          <div>
             <button class="btn bg-warning rounded-circle" style="width: 38px;height: 38px;line-height: 38px;padding: 6.4px;"><span class="material-symbols-outlined">sunny</span></button>
             <button class="btn"><span class="material-symbols-outlined">notifications</span></button>
             <button class="btn"><span class="material-symbols-outlined">apps</span></button>
             <button class="btn"><span class="material-symbols-outlined">account_circle</span></button>
           </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse  fixed-top bg-white" id="navbarSupportedContent" style="top:56.8px">
-            <div class="navbar-toggler border-0 p-5 pb-0">
-              <div class="d-flex justify-content-between ">
-                <button class="btn bg-warning rounded-circle" style="width: 38px;height: 38px;line-height: 38px;padding: 6.4px;"><span class="material-symbols-outlined">sunny</span></button>
-                <button class="btn"><span class="material-symbols-outlined">notifications</span></button>
-                <button class="btn"><span class="material-symbols-outlined">apps</span></button>
-                <button class="btn"><span class="material-symbols-outlined">account_circle</span></button>
-              </div>
-            </div>
-            <div class="navbar-toggler border-0 p-5 border-bottom" >
-              <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="button">Search</button>
-              </form>
-            </div>
-          </div>
         </div>
       </nav>
     </header>
-    <main class=" d-flex">
+    <main class="container-fluid d-flex">
       <!-- <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasSide">test</button>
       <div class="p-5 pt-3 pb-3 offcanvas offcanvas-start" tabindex="-1" id="offcanvasSide"> -->
-      <div class="side_menu ps-1 border-end accordion" id="accordionExample">
-        <div class="scrollable ">
-          <div class="accordion-item home" >
-              <div class="accordion-header"><p class="accordion-button pt-2 pb-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><span class="material-symbols-outlined">pie_chart</span>Home</p></div>
-              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                <ul class="accordion-body">
-                  <li>E commerce</li>
-                  <li>Project management</li>
-                  <li>CRM <span class="badge text-bg-primary">New</span></li>
-                  <li>social feed</li>
-                </ul>
-              </div>
-          </div>
-          <h6 class="text-uppercase">apps</h6>
-          <div class="accordion-item side_app">
-            <div class="accordion-header"><p class="accordion-button pt-2 pb-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_2" aria-expanded="true" aria-controls="collapse_2"><span class="me-2 material-symbols-outlined">shopping_cart</span>E commerce</p></div>
-            <div id="collapse_2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <ul class="accordion-body">
-                <li>project management</li>
+      <div class="side_menu pt-3 pb-3 border-end">
+        <div class="">
+          <div class="home ps-4 pe-5">
+              <p><span></span>Home</p>
+              <ul>
+                <li>E commerce</li>
+                <li>Project management</li>
                 <li>CRM <span class="badge text-bg-primary">New</span></li>
                 <li>social feed</li>
-                <li>Chat</li>
               </ul>
+          </div>
+          <div class="side_app ps-4 pe-5">
+            <h6 class="text-uppercase">apps</h6>
+            <ul>
+              <li>
+                <p><span></span>E commerce</p>
+                <div>
+                  <p>Project management</p>
+                  <p>CRM <span class="badge text-bg-primary">New</span></p>
+                  <p>social feed</p>
+                  <p>Chat</p>
+                </div>
+              </li>
+              <li>
+                <p><span></span>CRM</p>
+                <div>
+                  <p>E commerce</p>
+                  <p>Project management</p>
+                  <p>Chat</p>
+                  <p>Email</p>
+                </div>
+              </li>
+              <li>
+                <p><span></span>Project management</p>
+                <div>
+                  <p>E commerce</p>
+                  <p>CRM <span class="badge text-bg-primary">New</span></p>
+                  <p>Chat</p>
+                  <p>Email</p>
+                </div>
+              </li>
+              <li>
+                <p><span></span>Chat</p>
+              </li>
+              <li>
+                <p><span></span>Email</p>
+                <div>
+                  <p>E commerce</p>
+                  <p>CRM <span class="badge text-bg-primary">New</span></p>
+                  <p>Project management</p>
+                  <p>Chat</p>
+                </div>
+              </li>
+              <li>
+                <p><span></span>Events</p>
+                <div>
+                  <p>E commerce</p>
+                  <p>CRM <span class="badge text-bg-primary">New</span></p>
+                  <p>Project management</p>
+                  <p>Chat</p>
+                </div>
+              </li>
+              <li>
+                <p><span></span>Kanban</p>
+                <div>
+                  <p>E commerce</p>
+                  <p>CRM <span class="badge text-bg-primary">New</span></p>
+                  <p>Project management</p>
+                  <p>Chat</p>
+                </div>
+              </li>
+              <li>
+                <p><span></span>Social</p>
+                <div>
+                  <p>E commerce</p>
+                  <p>CRM <span class="badge text-bg-primary">New</span></p>
+                  <p>Project management</p>
+                  <p>Chat</p>
+                </div>
+              </li>
+              <li>
+                <p><span></span>Calender</p>
+              </li>
+            </ul>
+          </div>
+          <div class="pages ps-4 pe-5">
+            <h6 class="text-uppercase">pages</h6>
+            <ul>
+              <li>
+                <p><span></span>Starter</p>
+                <div>
+                  <p>Project management</p>
+                  <p>CRM <span class="badge text-bg-primary">New</span></p>
+                  <p>social feed</p>
+                  <p>Chat</p>
+                </div>
+              </li><li>
+                <p><span></span>Ender</p>
+                <div>
+                  <p>Project management</p>
+                  <p>CRM <span class="badge text-bg-primary">New</span></p>
+                  <p>social feed</p>
+                  <p>Chat</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="back_side border-top p-3 ps-4 pe-5">
+            <div>
+              <p><span class="material-symbols-outlined">keyboard_tab_rtl</span>&nbsp;&nbsp; Collapsed View</p>
             </div>
-          </div>
-          <div class="accordion-item side_app">
-            <div class="accordion-header"><p class="accordion-button pt-2 pb-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_3" aria-expanded="true" aria-controls="collapse_3"><span class="material-symbols-outlined">call</span>CRM</p></div>
-            <div id="collapse_3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <ul class="accordion-body">
-                <li>E commerce</li>
-                <li>project management</li>
-                <li>Chat</li>
-                <li>Email</li>
-              </ul>
-            </div>
-          </div>
-          <div class="accordion-item side_app">
-            <div class="accordion-header"><p class="accordion-button pt-2 pb-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_4" aria-expanded="true" aria-controls="collapse_4"><span class="material-symbols-outlined">content_paste</span>Project management</p></div>
-            <div id="collapse_4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <ul class="accordion-body">
-                <li>E commerce</li>
-                <li>CRM <span class="badge text-bg-primary">New</span></li>
-                <li>Chat</li>
-                <li>Email</li>
-              </ul>
-            </div>
-          </div>
-          <div class="accordion-item side_app">
-            <div class="accordion-header"><p class="accordion-button pt-2 pb-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_5" aria-expanded="true" aria-controls="collapse_5"><span class="material-symbols-outlined">mail</span>Email</p></div>
-            <div id="collapse_5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <ul class="accordion-body">
-                <li>E commerce</li>
-                <li>CRM <span class="badge text-bg-primary">New</span></li>
-                <li>project management</li>
-                <li>Chat</li>
-              </ul>
-            </div>
-          </div>
-          <div class="accordion-item no_item">
-            <div class="accordion-header"><p class="accordion-button pt-2 pb-2 collapsed" type="button" style="padding: 1.25rem;"><span class="material-symbols-outlined">chat_bubble</span>Chat</p></div>
-          </div>
-          <div class="accordion-item side_app">
-            <div class="accordion-header"><p class="accordion-button pt-2 pb-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_6" aria-expanded="true" aria-controls="collapse_6"><span class="material-symbols-outlined">bookmark</span>Events</p></div>
-            <div id="collapse_6" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <ul class="accordion-body">
-                <li>E commerce</li>
-                <li>CRM <span class="badge text-bg-primary">New</span></li>
-                <li>project management</li>
-                <li>Chat</li>
-              </ul>
-            </div>
-          </div>
-          <div class="accordion-item side_app">
-            <div class="accordion-header"><p class="accordion-button pt-2 pb-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_7" aria-expanded="true" aria-controls="collapse_7"><span class="material-symbols-outlined">view_kanban</span>Kanban</p></div>
-            <div id="collapse_7" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <ul class="accordion-body">
-                <li>E commerce</li>
-                <li>CRM <span class="badge text-bg-primary">New</span></li>
-                <li>project management</li>
-                <li>Chat</li>
-              </ul>
-            </div>
-          </div>
-          <div class="accordion-item side_app">
-            <div class="accordion-header"><p class="accordion-button pt-2 pb-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_8" aria-expanded="true" aria-controls="collapse_8"><span class="material-symbols-outlined">share</span>Social</p></div>
-            <div id="collapse_8" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <ul class="accordion-body">
-                <li>E commerce</li>
-                <li>CRM <span class="badge text-bg-primary">New</span></li>
-                <li>project management</li>
-                <li>Chat</li>
-              </ul>
-            </div>
-          </div>
-          <div class="accordion-item no_item">
-            <div class="accordion-header"><p class="accordion-button pt-2 pb-2 collapsed" type="button" style="padding: 1.25rem;"><span class="me-2 material-symbols-outlined">calendar_month</span>Calender</p></div>
-          </div>
-          <h6 class="text-uppercase">pages</h6>
-          <div class="accordion-item side_pages">
-            <div class="accordion-header"><p class="accordion-button pt-2 pb-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_9" aria-expanded="true" aria-controls="collapse_9"><span class="material-symbols-outlined">flag</span>Starter</p></div>
-            <div id="collapse_9" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <ul class="accordion-body">
-                <li>E commerce</li>
-                <li>CRM <span class="badge text-bg-primary">New</span></li>
-                <li>project management</li>
-                <li>Chat</li>
-              </ul>
-            </div>
-          </div>
-          <div class="accordion-item side_pages">
-            <div class="accordion-header"><p class="accordion-button pt-2 pb-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_10" aria-expanded="true" aria-controls="collapse_10"><span class="material-symbols-outlined">package_2</span>Ender</p></div>
-            <div id="collapse_10" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <ul class="accordion-body">
-                <li>E commerce</li>
-                <li>CRM <span class="badge text-bg-primary">New</span></li>
-                <li>project management</li>
-                <li>Chat</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="back_side border-top p-3 ps-4 pe-5">
-          <div>
-            <p type="button" style=" padding-left: 1.25rem;"><span class="material-symbols-outlined">keyboard_tab_rtl</span>&nbsp;&nbsp; Collapsed View</p>
           </div>
         </div>
       </div>
@@ -290,22 +256,22 @@
               </nav>
               <h1>Code</h1>
               <form class="row mt-4 gx-3 align-items-center">
-                  <div class="row gy-3">
-                    <div class="col-12 col-md-6 col-lg ">
+                  <div class="row ">
+                    <div class="col">
                       <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
                       <select class="form-select" id="inlineFormSelectPref1">
                         <option value="N" selected>N</option>
                         <option value="Y">Y</option>
                       </select>
                     </div>
-                    <div class="col-12 col-md-6 col-lg">
+                    <div class="col">
                       <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
                       <select class="form-select" id="inlineFormSelectPref2">
                         <option value="Y" selected>Y</option>
                         <option value="N">N</option>
                       </select>
                     </div>
-                    <div class="col-12 col-md-6 col-lg">
+                    <div class="col">
                       <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
                       <select class="form-select" id="inlineFormSelectPref3">
                         <option selected>수정일</option>
@@ -314,17 +280,17 @@
                         <option value="3">Three</option>
                       </select>
                     </div>
-                    <div class="col-12 col-md-6 col-lg">
+                    <div class="col">
                       <label class="visually-hidden" for="specificSizeInputName1">Preference</label>
                       <input type="text" class="form-control" id="specificSizeInputName1" placeholder="" value="2024-06-05">
                     </div>
-                    <div class="col-12 col-md-6 col-lg">
+                    <div class="col">
                       <label class="visually-hidden" for="specificSizeInputName2">Preference</label>
                       <input type="text" class="form-control" id="specificSizeInputName2" placeholder="" value="2024-07-05">
                     </div>
                   </div>
-                  <div class="row gy-3">
-                    <div class="col-12 col-md-6 col-lg">
+                  <div class="row gy-2">
+                    <div class="col">
                       <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
                       <select class="form-select" id="inlineFormSelectPref4">
                         <option selected>검색구분</option>
@@ -333,7 +299,7 @@
                         <option value="3">Three</option>
                       </select>
                     </div>
-                    <div class="col-12 col-md-6 col-lg">
+                    <div class="col">
                         <label class="visually-hidden" for="specificSizeInputName2">Preference</label>
                         <input type="text" class="form-control" id="specificSizeInputName2" placeholder="검색어">
                     </div>
@@ -349,17 +315,15 @@
               </form>
           </div>
           <div class="ps-5 pe-5 border-top border-bottom bg-white">
-            <div class="row flex-nowrap justify-content-between mt-3 mb-3">
-              <h5 class="col-2">Tatal: 171</h5>
-              <div class="col-2">
-                <select class="form-select " name="" id="">
-                  <option value="" selected>1</option>
-                  <option value="">2</option>
-                  <option value="">3</option>
-                  <option value="">4</option>
-                  <option value="">5</option>
-                </select>
-              </div>
+            <div class="d-flex justify-content-between m-3">
+              <h5>Tatal: 171</h5>
+              <select class="col-2" name="" id="">
+                <option value="" selected>1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+                <option value="">5</option>
+              </select>
             </div>
             <table class="table">
               <thead>
@@ -481,13 +445,11 @@
       </div>
       
     </main>
-  </div>
-    
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
       // const offcanvasElementList = document.querySelectorAll('.offcanvas')
       // const offcanvasList = [...offcanvasElementList].map(offcanvasEl => new bootstrap.Offcanvas(offcanvasEl))
     </script>
-</body>
+  </body>
 </html>

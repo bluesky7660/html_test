@@ -4,4 +4,131 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    white-space: nowrap;
 }
+
+a{
+    text-decoration: none;
+}
+h1{
+font-weight: bold;
+}
+
+header{
+position: fixed;
+right: 0;
+left: 0;
+background-color: #fff;
+z-index: 1;
+}
+
+/*사이드메뉴*/
+
+.side_menu{
+position: fixed;
+top:56.8px;
+bottom: 0;
+background-color: #fff;
+width: 270px;
+padding-bottom: 72.8px;
+z-index: 5;
+
+}
+.side_menu h6{
+color: #777;
+margin-top: 1rem;
+margin-bottom: 0;
+margin-left: 1rem;
+}
+.accordion-button{
+margin-bottom: 0;
+}
+.side_menu ul.accordion-body{
+padding-left: 5rem;
+padding-top: 0;
+margin-bottom: 0;
+}
+
+.side_menu li{
+cursor: pointer;
+}
+.side_menu li>*:not(p,span){
+padding-left:2rem;
+}
+.side_menu li>div{
+display: none;
+}
+.side_menu li span::before,.side_menu p span::before{
+content: "\e5df";
+font-family: 'Material Symbols Outlined';
+vertical-align: top;
+
+}
+.side_menu .back_side{
+width: 100%;
+position: absolute;
+bottom: 0;
+left: 0;
+margin-bottom: 0;
+background-color: #fff;
+z-index: 2;
+}
+.side_menu .back_side span::before{
+display: none;
+}
+.no_item span::before{
+visibility: hidden;
+}
+
+/*아코디언*/
+.accordion ul{
+padding-left: 0;
+}
+.accordion-item{
+border: none;
+}
+.accordion-button:not(.collapsed){
+background-color: #fff;
+box-shadow: none;
+}
+.accordion-button span::before{
+display: inline-block;
+transition: transform 0.2s ease-in-out;
+}
+.accordion-button::after{
+display: none;
+}
+.accordion-button:not(.collapsed) span::before{
+transform: rotate(90deg); 
+}
+.accordion-item li{
+margin-bottom: 8px;
+}
+.scrollable{
+overflow-y: auto;
+height: 100%;
+}
+.scrollable::-webkit-scrollbar{
+display: none !important;
+}
+
+/*컨텐츠*/
+.container-fluid{
+    padding: 0;
+}
+.contentArea{
+    width: 100%;
+    padding-left: 260px;
+    padding-top: 56px;
+}
+
+
+/*구글아이콘*/
+.material-symbols-outlined{
+    vertical-align: top;
+}
+/*side menu 아이콘*/
+.accordion-header .material-symbols-outlined{
+    margin-right: .5rem;
+}
+
