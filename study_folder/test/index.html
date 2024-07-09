@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="./style.css">
+    <style>
+      table{
+        text-align: center;
+        font-size: 13.5px;
+      }
+      .table td,.table th{
+        padding-top:15px;
+        padding-bottom: 15px;
+      }
+      .table th:not(:nth-child(2)) span::after{
+        content: "\e5d7";
+        font-family: 'Material Symbols Outlined';
+        vertical-align: top;
+      }
+      tr td:nth-child(6){
+            color: rgb(90, 106, 253);
+            font-weight: bold;
+      }
+      /* .contentArea form input[type="text"],.contentArea form select{
+        min-width: 130px;
+        max-width: 200px;
+      } */
+      @media (max-width: 991.98px) {
+        
+        .contentArea{
+          padding-left: 0;
+        }
+        .side_menu{
+          padding-bottom: 0;
+        }
+      }
+    </style>
+  </head>
+<body>
+  <div class="container-fluid">
+    <header class="fixed-top" >
+      <nav class="navbar navbar-expand-lg border-bottom " style="position: relative; ">
+        <div class="d-flex justify-content-between gx-4 ms-auto me-auto w-100 align-items-center ps-4 pe-4">
+          <a class="navbar-brand" href="#"><img class="me-2" src="../image/adsrun_logo.jpg" height="30px"  style="border-radius: 50%;vertical-align: top;">Adsrun</a>
+          <form class="d-flex  offcanvas-lg " role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="button">Search</button>
+          </form>
+          <div class=" offcanvas-lg">
+            <button class="btn bg-warning rounded-circle" style="width: 38px;height: 38px;line-height: 38px;padding: 6.4px;"><span class="material-symbols-outlined">sunny</span></button>
+            <button class="btn"><span class="material-symbols-outlined">notifications</span></button>
+            <button class="btn"><span class="material-symbols-outlined">apps</span></button>
+            <button class="btn"><span class="material-symbols-outlined">account_circle</span></button>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- <div class="collapse navbar-collapse  fixed-top bg-white" id="navbarSupportedContent" style="top:56.8px">
+            <div class="navbar-toggler border-0 p-5 pb-0">
+              <div class="d-flex justify-content-between ">
+                <button class="btn bg-warning rounded-circle" style="width: 38px;height: 38px;line-height: 38px;padding: 6.4px;"><span class="material-symbols-outlined">sunny</span></button>
+                <button class="btn"><span class="material-symbols-outlined">notifications</span></button>
+                <button class="btn"><span class="material-symbols-outlined">apps</span></button>
+                <button class="btn"><span class="material-symbols-outlined">account_circle</span></button>
+              </div>
+            </div>
+            <div class="navbar-toggler border-0 p-5 border-bottom" >
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="button">Search</button>
+              </form>
+            </div>
+          </div> -->
+        </div>
+      </nav>
+      <div class="navbar-collapse offcanvas-lg" id="navbarSupportedContent">
+        <div class="side_menu ps-1 flex-column border-end accordion" id="accordionExample">
+          <div class="scrollable navbar-toggler">
+            <div class="accordion-item home" >
+                <div class="accordion-header"><p class="accordion-button pt-2 pb-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><span class="material-symbols-outlined">pie_chart</span>Home</p></div>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                  <ul class="accordion-body">
+                    <li>E commerce</li>
+                    <li>Project management</li>
+                    <li>CRM <span class="badge text-bg-primary">New</span></li>
+                    <li>social feed</li>
+                  </ul>
+                </div>
+            </div>
+            <h6 class="text-uppercase">apps</h6>
+            <div class="accordion-item side_app">
+              <div class="accordion-header"><p class="accordion-button pt-2 pb-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_2" aria-expanded="true" aria-controls="collapse_2"><span class="me-2 material-symbols-outlined">shopping_cart</span>E commerce</p></div>
+              <div id="collapse_2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <ul class="accordion-body">
+                  <li>project management</li>
+                  <li>CRM <span class="badge text-bg-primary">New</span></li>
+                  <li>social feed</li>
+                  <li>Chat</li>
+                </ul>
+              </div>
+            </div>
+            <div class="accordion-item side_app">
+              <div class="accordion-header"><p class="accordion-button pt-2 pb-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_3" aria-expanded="true" aria-controls="collapse_3"><span class="material-symbols-outlined">call</span>CRM</p></div>
+              <div id="collapse_3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <ul class="accordion-body">
+                  <li>E commerce</li>
+                  <li>project management</li>
+                  <li>Chat</li>
+                  <li>Email</li>
+                </ul>
+              </div>
+            </div>
+            <div class="accordion-item side_app">
+              <div class="accordion-header"><p class="accordion-button pt-2 pb-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_4" aria-expanded="true" aria-controls="collapse_4"><span class="material-symbols-outlined">content_paste</span>Project management</p></div>
+              <div id="collapse_4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <ul class="accordion-body">
+                  <li>E commerce</li>
+                  <li>CRM <span class="badge text-bg-primary">New</span></li>
+                  <li>Chat</li>
+                  <li>Email</li>
+                </ul>
+              </div>
+            </div>
+            <div class="accordion-item side_app">
+              <div class="accordion-header"><p class="accordion-button pt-2 pb-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_5" aria-expanded="true" aria-controls="collapse_5"><span class="material-symbols-outlined">mail</span>Email</p></div>
+              <div id="collapse_5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <ul class="accordion-body">
+                  <li>E commerce</li>
+                  <li>CRM <span class="badge text-bg-primary">New</span></li>
+                  <li>project management</li>
+                  <li>Chat</li>
+                </ul>
+              </div>
+            </div>
+            <div class="accordion-item no_item">
+              <div class="accordion-header"><p class="accordion-button pt-2 pb-2 collapsed" type="button" style="padding: 1.25rem;"><span class="material-symbols-outlined">chat_bubble</span>Chat</p></div>
+            </div>
+            <div class="accordion-item side_app">
+              <div class="accordion-header"><p class="accordion-button pt-2 pb-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_6" aria-expanded="true" aria-controls="collapse_6"><span class="material-symbols-outlined">bookmark</span>Events</p></div>
+              <div id="collapse_6" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <ul class="accordion-body">
+                  <li>E commerce</li>
+                  <li>CRM <span class="badge text-bg-primary">New</span></li>
+                  <li>project management</li>
+                  <li>Chat</li>
+                </ul>
+              </div>
+            </div>
+            <div class="accordion-item side_app">
+              <div class="accordion-header"><p class="accordion-button pt-2 pb-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_7" aria-expanded="true" aria-controls="collapse_7"><span class="material-symbols-outlined">view_kanban</span>Kanban</p></div>
+              <div id="collapse_7" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <ul class="accordion-body">
+                  <li>E commerce</li>
+                  <li>CRM <span class="badge text-bg-primary">New</span></li>
+                  <li>project management</li>
+                  <li>Chat</li>
+                </ul>
+              </div>
+            </div>
+            <div class="accordion-item side_app">
+              <div class="accordion-header"><p class="accordion-button pt-2 pb-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_8" aria-expanded="true" aria-controls="collapse_8"><span class="material-symbols-outlined">share</span>Social</p></div>
+              <div id="collapse_8" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <ul class="accordion-body">
+                  <li>E commerce</li>
+                  <li>CRM <span class="badge text-bg-primary">New</span></li>
+                  <li>project management</li>
+                  <li>Chat</li>
+                </ul>
+              </div>
+            </div>
+            <div class="accordion-item no_item">
+              <div class="accordion-header"><p class="accordion-button pt-2 pb-2 collapsed" type="button" style="padding: 1.25rem;"><span class="me-2 material-symbols-outlined">calendar_month</span>Calender</p></div>
+            </div>
+            <h6 class="text-uppercase">pages</h6>
+            <div class="accordion-item side_pages">
+              <div class="accordion-header"><p class="accordion-button pt-2 pb-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_9" aria-expanded="true" aria-controls="collapse_9"><span class="material-symbols-outlined">flag</span>Starter</p></div>
+              <div id="collapse_9" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <ul class="accordion-body">
+                  <li>E commerce</li>
+                  <li>CRM <span class="badge text-bg-primary">New</span></li>
+                  <li>project management</li>
+                  <li>Chat</li>
+                </ul>
+              </div>
+            </div>
+            <div class="accordion-item side_pages">
+              <div class="accordion-header"><p class="accordion-button pt-2 pb-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_10" aria-expanded="true" aria-controls="collapse_10"><span class="material-symbols-outlined">package_2</span>Ender</p></div>
+              <div id="collapse_10" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <ul class="accordion-body">
+                  <li>E commerce</li>
+                  <li>CRM <span class="badge text-bg-primary">New</span></li>
+                  <li>project management</li>
+                  <li>Chat</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="back_side border-top p-3 ps-4 pe-5 navbar-toggler">
+            <div>
+              <p type="button" style=" padding-left: 1.25rem;"><span class="material-symbols-outlined">keyboard_tab_rtl</span>&nbsp;&nbsp; Collapsed View</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </header>
+    <main class=" d-flex">
+      <div class="contentArea bg-light">
+        <div class="contentBox  pb-5">
+          <div class=" p-5 pb-4">
+              <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Page 1</a></li>
+                  <li class="breadcrumb-item"><a href="#">Page 2</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Default</li>
+                  </ol>
+              </nav>
+              <h1>Code</h1>
+              <form class="row mt-4 gx-3 align-items-center">
+                  <div class="row gy-3">
+                    <div class="col-12 col-md-6 col-lg ">
+                      <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                      <select class="form-select" id="inlineFormSelectPref1">
+                        <option value="N" selected>N</option>
+                        <option value="Y">Y</option>
+                      </select>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg">
+                      <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                      <select class="form-select" id="inlineFormSelectPref2">
+                        <option value="Y" selected>Y</option>
+                        <option value="N">N</option>
+                      </select>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg">
+                      <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                      <select class="form-select" id="inlineFormSelectPref3">
+                        <option selected>수정일</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg">
+                      <label class="visually-hidden" for="specificSizeInputName1">Preference</label>
+                      <input type="text" class="form-control" id="specificSizeInputName1" placeholder="" value="2024-06-05">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg">
+                      <label class="visually-hidden" for="specificSizeInputName2">Preference</label>
+                      <input type="text" class="form-control" id="specificSizeInputName2" placeholder="" value="2024-07-05">
+                    </div>
+                  </div>
+                  <div class="row gy-3">
+                    <div class="col-12 col-md-6 col-lg">
+                      <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                      <select class="form-select" id="inlineFormSelectPref4">
+                        <option selected>검색구분</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg">
+                        <label class="visually-hidden" for="specificSizeInputName2">Preference</label>
+                        <input type="text" class="form-control" id="specificSizeInputName2" placeholder="검색어">
+                    </div>
+                    <div class="col">
+                        <button type="submit" class="btn btn-primary material-symbols-outlined">search</button>
+                        <button type="submit" class="btn btn-primary material-symbols-outlined">refresh</button>
+                    </div>
+                    <div class="col">      
+                    </div>
+                    <div class="col">
+                    </div>
+                  </div>
+              </form>
+          </div>
+          <div class="ps-5 pe-5 border-top border-bottom bg-white">
+            <div class="row flex-nowrap justify-content-between mt-3 mb-3">
+              <h5 class="col-2">Tatal: 171</h5>
+              <div class="col-2">
+                <select class="form-select " name="" id="">
+                  <option value="" selected>1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                  <option value="">4</option>
+                  <option value="">5</option>
+                </select>
+              </div>
+            </div>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>
+                    <input type="checkbox">
+                  </th>
+                  <th><span>#</span></th>
+                  <th><span>코드그룹 코드</span></th>
+                  <th><span>코드그룹 이름</span></th>
+                  <th><span>코드</span></th>
+                  <th><span>대체코드</span> <span>코드이름</span> <span>코드이름(영문)</span></th>
+                  <th><span>사용</span></th>
+                  <th><span>순서</span></th>
+                  <th><span>등록일</span></th>
+                  <th><span>수정일</span></th>
+                </tr>
+              </thead>
+              <tbody class="table-group-divider ">
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>171</td>
+                    <td>57</td>
+                    <td>테테테</td>
+                    <td>278</td>
+                    <td>ㅁㄴㅇㄹ</td>
+                    <td>Y</td>
+                    <td>1</td>
+                    <td>2023-10-12 16:02:31</td>
+                    <td>2023-10-12 16:02:31</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>170</td>
+                    <td>33</td>
+                    <td>로그인,로그인UI</td>
+                    <td>272</td>
+                    <td>사용자</td>
+                    <td>Y</td>
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>169</td>
+                    <td>33</td>
+                    <td>로그인,로그인UI</td>
+                    <td>273</td>
+                    <td>관리자</td>
+                    <td>Y</td>
+                    <td>2</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>168</td>
+                    <td>32</td>
+                    <td>qna.타입</td>
+                    <td>266</td>
+                    <td>기타</td>
+                    <td>Y</td>
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>167</td>
+                    <td>31</td>
+                    <td>qna.상태</td>
+                    <td>262</td>
+                    <td>미확인</td>
+                    <td>Y</td>
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="m-4">
+              <nav aria-label="Page navigation lists" >
+                <ul class="pagination justify-content-center">
+                  <li class="page-item disabled">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="page-item active "><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li class="page-item"><a class="page-link" href="#">5</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="pb-5 d-flex justify-content-between">
+              <div>
+                  <button class="btn btn-danger material-symbols-outlined">close</button>
+                  <button class="btn btn-danger material-symbols-outlined">delete</button>
+              </div>
+              <div>
+                  <button class="btn btn-success material-symbols-outlined">scan_delete</button>
+                  <button class="btn btn-primary material-symbols-outlined" onclick="location.href='./form.html'" >add</button>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="footer p-3 pe-5 ps-5 bg-light border-top">
+          <p>Thank you for creating with phoenix | 2023 &copy; <span class="text-primary">Themewagon</span></p>
+        </div>
+      </div>
+      
+    </main>
+  </div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+      // const offcanvasElementList = document.querySelectorAll('.offcanvas')
+      // const offcanvasList = [...offcanvasElementList].map(offcanvasEl => new bootstrap.Offcanvas(offcanvasEl))
+    </script>
+</body>
+</html>

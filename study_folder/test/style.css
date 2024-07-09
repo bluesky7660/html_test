@@ -18,23 +18,24 @@ header{
 position: fixed;
 right: 0;
 left: 0;
-background-color: #fff;
 z-index: 1;
 }
-.footer p{
-    text-overflow: ellipsis;
+header nav{
+    background-color: #fff; 
 }
 
 /*사이드메뉴*/
 
 .side_menu{
-position: fixed;
+    display: flex;
+/* position: fixed; */
 top:56.8px;
 bottom: 0;
 background-color: #fff;
 width: 270px;
-padding-bottom: 72.8px;
-z-index: 5;
+height: calc(100vh - 56.8px);
+/* padding-bottom: 72.8px; */
+/* z-index: 5; */
 
 }
 .side_menu h6{
@@ -69,12 +70,12 @@ vertical-align: top;
 }
 .side_menu .back_side{
 width: 100%;
-position: absolute;
+/* position: absolute; */
 bottom: 0;
 left: 0;
 margin-bottom: 0;
 background-color: #fff;
-z-index: 2;
+/* z-index: 2; */
 }
 .side_menu .back_side span::before{
 display: none;
@@ -142,6 +143,6 @@ display: none !important;
     .side_menu{
       /* padding-bottom: 0;
       height: calc(100vh - 72.8px); */
-      display: none;
+      background-color: red;
     }
-}
+  }
