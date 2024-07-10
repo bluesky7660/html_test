@@ -29,71 +29,20 @@
         z-index: 1;
       }
 
-      /*
-      .accordion ul{
-        padding-left: 0;
+      .contentBox>div:nth-child(2){
+        padding-left:3rem;
+        padding-right:3rem;
       }
-      main.container-fluid{
-        padding: 0;
-      }
-      
-      
-      .side_menu{
-        position: fixed;
-        top:56.8px;
-        bottom: 0;
-        background-color: #fff;
-        width: 260px;
-        z-index: 5;
-      }
-      .home li{
-        margin-bottom: 8px;
-      }
-      .side_menu h6{
-        color: #777;
-        margin-bottom: 1rem;
-      }
-      .accordion-button{
-        margin-bottom: 0;
-      }
-      .side_menu ul.accordion-body{
-        padding-left: 3rem;
-        padding-top: 0;
-        margin-bottom: 0;
-      }
-      .side_menu li>*:not(p,.home span){
-        padding-left:2rem;
-      }
-      .side_menu li>div{
-        display: none;
-      }
-      .side_menu li span::before,.home p span::before{
-        content: "\e5df";
-        font-family: 'Material Symbols Outlined';
-        vertical-align: top;
-      }
-      .side_menu .back_side{
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-        margin-bottom: 0;
-        background-color: #fff;
-      }
-
-     /*컨텐츠*/
-      /* .contentArea{
-            width: 100%;
-            padding-left: 260px;
-            padding-top: 56px;
-      } */
 
       table{
         text-align: center;
         font-size: 13.5px;
+        overflow-x: scroll;
       }
       .table td,.table th{
         padding-top:15px;
         padding-bottom: 15px;
+        vertical-align: middle;
       }
       .table th:not(:nth-child(2)) span::after{
         content: "\e5d7";
@@ -104,10 +53,17 @@
             color: rgb(90, 106, 253);
             font-weight: bold;
       }
-      /* .contentArea form input[type="text"],.contentArea form select{
-        min-width: 130px;
-        max-width: 200px;
-      } */
+      
+      @media (max-width: 991.98px) {
+        
+        .contentBox>div:nth-child(2){
+          padding:2rem;
+        }
+        tr td:nth-child(9), tr td:nth-child(10){
+          white-space: break-spaces;
+        }
+      }
+    
     </style>
   </head>
 <body>
@@ -348,8 +304,8 @@
                   </div>
               </form>
           </div>
-          <div class="ps-5 pe-5 border-top border-bottom bg-white">
-            <div class="row flex-nowrap justify-content-between mt-3 mb-3">
+          <div class="border-top border-bottom bg-white">
+            <div class="row flex-nowrap justify-content-between mt-3 mb-3 gx-0">
               <h5 class="col-2">Tatal: 171</h5>
               <div class="col-2">
                 <select class="form-select " name="" id="">
@@ -371,7 +327,7 @@
                   <th><span>코드그룹 코드</span></th>
                   <th><span>코드그룹 이름</span></th>
                   <th><span>코드</span></th>
-                  <th><span>대체코드</span> <span>코드이름</span> <span>코드이름(영문)</span></th>
+                  <th class="d-flex flex-wrap"><span>대체코드</span> <span>코드이름</span> <span>코드이름(영문)</span></th>
                   <th><span>사용</span></th>
                   <th><span>순서</span></th>
                   <th><span>등록일</span></th>
